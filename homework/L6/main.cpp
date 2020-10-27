@@ -51,15 +51,15 @@ void drain(MaxHeap<T> heap) {
 
 template<typename T>
 void heapifyTest(T *data, int size) {
-    MaxHeap<int> heap(data, size);
+    MaxHeap<T> heap(data, size);
     cout << "Heapify test: " << (heap.isValid() ? "valid" : "INVALID") << endl;
     drain(heap);
 }
 
 template<typename T>
 void heapsortTest(T *data, int size, bool print) {
-    MaxHeap<int>::heapsort(data, size);
-    int prev = -1;
+    MaxHeap<T>::heapsort(data, size);
+    int prev = INT_MIN;
     if (print) {
         cout << "sorted: " << endl;
         for (int i = 0; i < size; i++) {
@@ -86,19 +86,21 @@ int main() {
 
     cout << "**** Int MaxHeap Tests ****" << endl;
     heapTest<int>(intData,14);
+    heapifyTest<int>(intData, 14);
+    heapsortTest<int>(intData, 14, true);
     cout << endl;
 
     cout << "**** Double MaxHeap Tests ****" << endl;
     heapTest<double>(dblData,10);
+    heapifyTest<double>(dblData, 10);
+    heapsortTest<double>(dblData, 10, true);
     cout << endl;
 
     cout << "**** Enum MaxHeap Tests ****" << endl;
     heapTest<Importance>(impData,7);
+    heapifyTest<Importance>(impData, 7);
+    heapsortTest<Importance>(impData, 7, true);
 
-
-
-//    heapifyTest(1000, 100);
-//    heapsortTest(50, 100, true);
 
     /* FIXME: do timing in C++ like in this Java version
      * FIXME: this would also require resize() with dynamic array
