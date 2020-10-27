@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session6.Rectangle-Template/main.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session6.Rectangle-Template/cmake-build-debug/CMakeFiles/Session6_Rectangle_Template.dir/main.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session6.Rectangle-Template/main.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session6.Rectangle-Template/cmake-build-debug/CMakeFiles/Session6_Rectangle_Template.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

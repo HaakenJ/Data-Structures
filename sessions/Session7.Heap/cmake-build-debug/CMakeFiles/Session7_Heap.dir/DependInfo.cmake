@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session7.Heap/Heap.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session7.Heap/cmake-build-debug/CMakeFiles/Session7_Heap.dir/Heap.cpp.obj"
-  "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session7.Heap/main.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session7.Heap/cmake-build-debug/CMakeFiles/Session7_Heap.dir/main.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/Heap.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/cmake-build-debug/CMakeFiles/Session7_Heap.dir/Heap.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/main.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/cmake-build-debug/CMakeFiles/Session7_Heap.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.

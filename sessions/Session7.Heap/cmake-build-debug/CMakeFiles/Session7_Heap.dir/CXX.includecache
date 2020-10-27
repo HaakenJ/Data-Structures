@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/Heap.h
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/main.cpp
+iostream
+-
+Heap.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/Heap.h
+time.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/time.h
+

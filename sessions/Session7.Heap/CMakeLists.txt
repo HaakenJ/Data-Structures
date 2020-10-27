@@ -3,4 +3,9 @@ project(Session7_Heap)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Session7_Heap main.cpp Heap.cpp Heap.h)
+include_directories(.)
+
+add_executable(Session7_Heap
+        Heap.cpp
+        Heap.h
+        main.cpp)
