@@ -61,7 +61,7 @@ public:
     const T &peek() const;
 
     /**
-     * Sort the given array in place in descending order using heapsort,
+     * Sort the given array in place in ascending order using heapsort,
      * O(n log n).
      *
      * @param data to be sorted
@@ -264,8 +264,9 @@ int MaxHeap<T>::right(int parentIndex) {
 template<typename T>
 void MaxHeap<T>::heapsort(T *data, int size) {
     MaxHeap heap(data, size);
-    // dequeueing everything will get it in descending order
-    for (int i = 0; i < size; i++)
+    // dequeueing everything and storing in reverse order in the
+    // data array will get everything in ascending order
+    for (int i = size - 1; i >= 0; i--)
         data[i] = heap.dequeue();
 }
 

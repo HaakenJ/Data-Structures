@@ -63,10 +63,18 @@ void heapsortTest(int size, int range, bool print) {
     for (int i = 0; i < size; i++)
         data[i] = rand() % range;
     MaxHeap<int>::heapsort(data, size);
+    int prev = -1;
     if (print) {
         cout << "sorted: " << endl;
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++) {
+            if (data[i] < prev) {
+                cout << "FAILED" << endl;
+                return;
+            }
             cout << data[i] << " ";
+            prev = data[i];
+        }
+
         cout << endl;
     }
 }
