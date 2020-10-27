@@ -5,14 +5,15 @@
 
 #include <iostream>
 #include "MaxHeap.h"
-#include "time.h"
+
 using namespace std;
 
 string tf(bool cond) {
     return cond ? "true" : "false";
 }
 
-void randomTest(int size, int range) {
+template<typename T>
+void heapTest(T *data, int size) {
     MaxHeap<int> heap1;
     MaxHeap<int> heap2;
 
@@ -20,9 +21,8 @@ void randomTest(int size, int range) {
     cout << "Empty heap1: " << tf(heap1.empty()) << endl;
     cout << "Empty heap2: " << tf(heap2.empty()) << endl;
     for (int i = 0; i < size; i++) {
-        int n = rand() % range;
-        heap1.enqueue(n);
-        heap2.enqueue(n);
+        heap1.enqueue(data[i]);
+        heap2.enqueue(data[i]);
         if (i % 4 == 0)
             heap1.dequeue(); // so we can get some dequeues into the mix
     }
@@ -49,19 +49,15 @@ void drain(MaxHeap<T> heap) {
     }
 }
 
-void heapifyTest(int size, int range) {
-    int data[size];
-    for (int i = 0; i < size; i++)
-        data[i] = rand() % range;
+template<typename T>
+void heapifyTest(T *data, int size) {
     MaxHeap<int> heap(data, size);
     cout << "Heapify test: " << (heap.isValid() ? "valid" : "INVALID") << endl;
     drain(heap);
 }
 
-void heapsortTest(int size, int range, bool print) {
-    int data[size];
-    for (int i = 0; i < size; i++)
-        data[i] = rand() % range;
+template<typename T>
+void heapsortTest(T *data, int size, bool print) {
     MaxHeap<int>::heapsort(data, size);
     int prev = -1;
     if (print) {
@@ -80,10 +76,29 @@ void heapsortTest(int size, int range, bool print) {
 }
 
 int main() {
-    srand(time(nullptr));
-    randomTest(400, 100);
-    heapifyTest(1000, 100);
-    heapsortTest(50, 100, true);
+    enum Importance {
+        VERY = 20, SOMEWHAT = 9, BLEH = 0, HARDLY = -3, UNIMPORTANT = -10
+    };
+
+    int intData[] = {15, 34, 23, 53, 23, 11, 223, 43, 56, 99, 1, 0, 2, 88};
+    double dblData[] = {5.0, 23.0, 66.0, 234.2, 5.1, 5.2, 5.3, 66.6, 93.0, 52.9};
+    Importance impData[] = {UNIMPORTANT, HARDLY, BLEH, SOMEWHAT, VERY, UNIMPORTANT, UNIMPORTANT};
+
+    cout << "**** Int MaxHeap Tests ****" << endl;
+    heapTest<int>(intData,14);
+    cout << endl;
+
+    cout << "**** Double MaxHeap Tests ****" << endl;
+    heapTest<double>(dblData,10);
+    cout << endl;
+
+    cout << "**** Enum MaxHeap Tests ****" << endl;
+    heapTest<Importance>(impData,7);
+
+
+
+//    heapifyTest(1000, 100);
+//    heapsortTest(50, 100, true);
 
     /* FIXME: do timing in C++ like in this Java version
      * FIXME: this would also require resize() with dynamic array
