@@ -1,6 +1,9 @@
 //
-// Created by Kevin Lundeen on 10/21/20.
-// Seattle University, CPSC 5005, Session 7
+// Created by Kramer Johnson on 10/26/20.
+// Seattle University, CPSC 5910 03 Fall 2020
+//
+// Build off MinHeap non-template implementation
+// by Kevin Lundeen
 //
 
 #pragma once
@@ -15,16 +18,8 @@
  *
  * The priority queue enqueues items in any order, but the dequeue order
  * is determined by the natural ordering of the elements. The item dequeued
- * is always the minimum value of all the items currently in the priority
+ * is always the maximum value of all the items currently in the priority
  * queue.
- *
- * A priority queue does not permit null elements.
- *
- * Note that some priority queue authors would call our 'enqueue' method 'offer'
- * and our 'dequeue' method 'poll'. And Carrano calls them 'add' and 'remove'.
- *
- * A priority queue has the same methods as a queue but the semantics of dequeue
- * (and correspondingly, peek) are different.
  */
 template<typename T>
 class MaxHeap {
@@ -36,7 +31,6 @@ public:
 
     /**
      * All-at-once constructor.
-     * This is more efficient than enqueueing them all individually.
      * @param data  array of integers to enqueue
      * @param size  number of integers in data
      */
@@ -46,11 +40,11 @@ public:
      * Add an element to the queue. Items need not be unique.
      * @param newItem to add to the priority queue
      */
-    void enqueue(T newItem);
+    void enqueue(const T &newItem);
 
     /**
-     * Remove the least element from the queue.
-     * @return the least element
+     * Remove the greatest element from the queue.
+     * @return the greatest element
      */
     T dequeue();
 
@@ -64,10 +58,10 @@ public:
      * Fetch the element that would be returned by dequeue.
      * @return the least element
      */
-    T peek() const;
+    const T &peek() const;
 
     /**
-     * Sort the given array in place in ascending order using heapsort,
+     * Sort the given array in place in descending order using heapsort,
      * O(n log n).
      *
      * @param data to be sorted
@@ -158,14 +152,14 @@ template<typename T>
 MaxHeap<T>::MaxHeap() = default;
 
 template<typename T>
-MaxHeap<T>::MaxHeap(const T *data, int size) {
+MaxHeap<T>::MaxHeap(const T *data, const int size) {
     for (int i = 0; i < size; i++)
         this->data.push_back(data[i]);
     heapify();
 }
 
 template<typename T>
-void MaxHeap<T>::enqueue(T newItem) {
+void MaxHeap<T>::enqueue(const T &newItem) {
     data.push_back(newItem);
     percolateUp(data.size() - 1);
 }
@@ -192,7 +186,7 @@ bool MaxHeap<T>::empty() const {
 }
 
 template<typename T>
-T MaxHeap<T>::peek() const {
+const T & MaxHeap<T>::peek() const {
     if (empty())
         throw std::invalid_argument("empty queue");
     return data[0];
@@ -212,6 +206,7 @@ void MaxHeap<T>::percolateUp(int index) {
         int p = parent(index);
         // if in violation of invariants, swap it up
         if (data[p] < data[index]) {
+            // TODO: figure out swap function or make your own
             T temp = data[p];
             data[p] = data[index];
             data[index] = temp;
@@ -232,6 +227,7 @@ void MaxHeap<T>::percolateDown(int index) {
         }
         // if in violation of invariants, swap it down
         if (data[child] > data[index]) {
+            // TODO: figure out swap function or make your own
             T temp = data[index];
             data[index] = data[child];
             data[child] = temp;
