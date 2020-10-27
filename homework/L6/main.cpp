@@ -4,7 +4,7 @@
 //
 
 #include <iostream>
-#include "Heap.h"
+#include "MaxHeap.h"
 #include "time.h"
 using namespace std;
 
@@ -13,8 +13,8 @@ string tf(bool cond) {
 }
 
 void randomTest(int size, int range) {
-    Heap<int> heap1;
-    Heap<int> heap2;
+    MaxHeap<int> heap1;
+    MaxHeap<int> heap2;
 
     // add a bunch of things
     cout << "Empty heap1: " << tf(heap1.empty()) << endl;
@@ -33,7 +33,7 @@ void randomTest(int size, int range) {
 }
 
 template<typename T>
-void drain(Heap<T> heap) {
+void drain(MaxHeap<T> heap) {
     // take them out (and check peek at the same time)
     int prev = -1;
     while (!heap.empty()) {
@@ -53,7 +53,7 @@ void heapifyTest(int size, int range) {
     int data[size];
     for (int i = 0; i < size; i++)
         data[i] = rand() % range;
-    Heap<int> heap(data, size);
+    MaxHeap<int> heap(data, size);
     cout << "Heapify test: " << (heap.isValid() ? "valid" : "INVALID") << endl;
     drain(heap);
 }
@@ -62,7 +62,7 @@ void heapsortTest(int size, int range, bool print) {
     int data[size];
     for (int i = 0; i < size; i++)
         data[i] = rand() % range;
-    Heap<int>::heapsort(data, size);
+    MaxHeap<int>::heapsort(data, size);
     if (print) {
         cout << "sorted: " << endl;
         for (int i = 0; i < size; i++)

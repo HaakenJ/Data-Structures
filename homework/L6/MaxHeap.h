@@ -11,7 +11,7 @@
 #include <bits/stdc++.h>
 
 /**
- * This Heap class implements a Priority Queue ADT of integers
+ * This MaxHeap class implements a Priority Queue ADT of integers
  *
  * The priority queue enqueues items in any order, but the dequeue order
  * is determined by the natural ordering of the elements. The item dequeued
@@ -27,12 +27,12 @@
  * (and correspondingly, peek) are different.
  */
 template<typename T>
-class Heap {
+class MaxHeap {
 public:
     /**
      * Default ctor
      */
-     Heap();
+     MaxHeap();
 
     /**
      * All-at-once constructor.
@@ -40,7 +40,7 @@ public:
      * @param data  array of integers to enqueue
      * @param size  number of integers in data
      */
-    Heap(const T *data, int size);
+    MaxHeap(const T *data, int size);
 
     /**
      * Add an element to the queue. Items need not be unique.
@@ -155,23 +155,23 @@ private:
 };
 
 template<typename T>
-Heap<T>::Heap() = default;
+MaxHeap<T>::MaxHeap() = default;
 
 template<typename T>
-Heap<T>::Heap(const T *data, int size) {
+MaxHeap<T>::MaxHeap(const T *data, int size) {
     for (int i = 0; i < size; i++)
         this->data.push_back(data[i]);
     heapify();
 }
 
 template<typename T>
-void Heap<T>::enqueue(T newItem) {
+void MaxHeap<T>::enqueue(T newItem) {
     data.push_back(newItem);
     percolateUp(data.size() - 1);
 }
 
 template<typename T>
-T Heap<T>::dequeue() {
+T MaxHeap<T>::dequeue() {
     T ret = peek();
 
     // get last val in heap, copy value to index 0 and decrease size
@@ -187,19 +187,19 @@ T Heap<T>::dequeue() {
 }
 
 template<typename T>
-bool Heap<T>::empty() const {
+bool MaxHeap<T>::empty() const {
     return data.size() == 0;
 }
 
 template<typename T>
-T Heap<T>::peek() const {
+T MaxHeap<T>::peek() const {
     if (empty())
         throw std::invalid_argument("empty queue");
     return data[0];
 }
 
 template<typename T>
-void Heap<T>::heapify() {
+void MaxHeap<T>::heapify() {
     // starting at last parent, work backwards to root, causing every subtree
     // to be made into a heap
     for (int index = data.size() / 2; index >= 0; index--)
@@ -207,7 +207,7 @@ void Heap<T>::heapify() {
 }
 
 template<typename T>
-void Heap<T>::percolateUp(int index) {
+void MaxHeap<T>::percolateUp(int index) {
     if (index > 0) {
         int p = parent(index);
         // if in violation of invariants, swap it up
@@ -221,7 +221,7 @@ void Heap<T>::percolateUp(int index) {
 }
 
 template<typename T>
-void Heap<T>::percolateDown(int index) {
+void MaxHeap<T>::percolateDown(int index) {
     if (hasLeft(index)) {
         // get minimum of the one or two children
         int child = left(index);
@@ -241,40 +241,40 @@ void Heap<T>::percolateDown(int index) {
 }
 
 template<typename T>
-bool Heap<T>::hasLeft(int parentIndex) const {
+bool MaxHeap<T>::hasLeft(int parentIndex) const {
     return left(parentIndex) < data.size();
 }
 
 template<typename T>
-bool Heap<T>::hasRight(int parentIndex) const {
+bool MaxHeap<T>::hasRight(int parentIndex) const {
     return right(parentIndex) < data.size();
 }
 
 template<typename T>
-int Heap<T>::parent(int childIndex) {
+int MaxHeap<T>::parent(int childIndex) {
     return (childIndex - 1) / 2;
 }
 
 template<typename T>
-int Heap<T>::left(int parentIndex) {
+int MaxHeap<T>::left(int parentIndex) {
     return parentIndex * 2 + 1;
 }
 
 template<typename T>
-int Heap<T>::right(int parentIndex) {
+int MaxHeap<T>::right(int parentIndex) {
     return left(parentIndex) + 1;
 }
 
 template<typename T>
-void Heap<T>::heapsort(T *data, int size) {
-    Heap heap(data, size);
+void MaxHeap<T>::heapsort(T *data, int size) {
+    MaxHeap heap(data, size);
     // dequeueing everything will get it in ascending order
     for (int i = 0; i < size; i++)
         data[i] = heap.dequeue();
 }
 
 template<typename T>
-bool Heap<T>::isValid() {
+bool MaxHeap<T>::isValid() {
     for (int i = data.size() - 1; i > 0; i--) {
         if (data[parent(i)] > data[i])
             return false;

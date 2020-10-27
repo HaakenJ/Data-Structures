@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/Heap.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/MaxHeap.h
 iostream
 -
 vector
@@ -19,8 +19,8 @@ bits/stdc++.h
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/main.cpp
 iostream
 -
-Heap.h
-D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/Heap.h
+MaxHeap.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/MaxHeap.h
 time.h
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/time.h
 
