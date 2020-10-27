@@ -211,7 +211,7 @@ void MaxHeap<T>::percolateUp(int index) {
     if (index > 0) {
         int p = parent(index);
         // if in violation of invariants, swap it up
-        if (data[p] > data[index]) {
+        if (data[p] < data[index]) {
             T temp = data[p];
             data[p] = data[index];
             data[index] = temp;
@@ -227,11 +227,11 @@ void MaxHeap<T>::percolateDown(int index) {
         int child = left(index);
         if (hasRight(index)) {
             int r = right(index);
-            if (data[r] < data[child])
+            if (data[r] > data[child])
                 child = r;
         }
         // if in violation of invariants, swap it down
-        if (data[child] < data[index]) {
+        if (data[child] > data[index]) {
             T temp = data[index];
             data[index] = data[child];
             data[child] = temp;
@@ -268,7 +268,7 @@ int MaxHeap<T>::right(int parentIndex) {
 template<typename T>
 void MaxHeap<T>::heapsort(T *data, int size) {
     MaxHeap heap(data, size);
-    // dequeueing everything will get it in ascending order
+    // dequeueing everything will get it in descending order
     for (int i = 0; i < size; i++)
         data[i] = heap.dequeue();
 }
@@ -276,7 +276,7 @@ void MaxHeap<T>::heapsort(T *data, int size) {
 template<typename T>
 bool MaxHeap<T>::isValid() {
     for (int i = data.size() - 1; i > 0; i--) {
-        if (data[parent(i)] > data[i])
+        if (data[parent(i)] < data[i])
             return false;
     }
     return true;

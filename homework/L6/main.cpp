@@ -35,9 +35,9 @@ void randomTest(int size, int range) {
 template<typename T>
 void drain(MaxHeap<T> heap) {
     // take them out (and check peek at the same time)
-    int prev = -1;
+    int prev = INT_MAX;
     while (!heap.empty()) {
-        if (heap.peek() < prev) {
+        if (heap.peek() > prev) {
             cout << "out of order FAIL!!" << endl;
             return;
         }
