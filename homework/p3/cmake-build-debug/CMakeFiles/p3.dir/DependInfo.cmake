@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_notes/data_structures/homework/p3/p3.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/homework/p3/cmake-build-debug/CMakeFiles/p3.dir/p3.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p3/p3.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p3/cmake-build-debug/CMakeFiles/p3.dir/p3.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

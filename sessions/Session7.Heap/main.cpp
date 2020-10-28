@@ -4,8 +4,9 @@
 //
 
 #include <iostream>
+#include <ctime>
 #include "Heap.h"
-#include "time.h"
+
 using namespace std;
 
 string tf(bool cond) {

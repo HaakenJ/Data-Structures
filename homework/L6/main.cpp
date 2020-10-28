@@ -1,6 +1,9 @@
 //
-// Created by Kevin Lundeen on 10/21/20.
-// Seattle University, CPSC 5005, Session 7
+// Created by Kramer Johnson on 10/26/20.
+// Seattle University, CPSC 5910 03 Fall 2020
+//
+// Build off MinHeap non-template tests
+// by Kevin Lundeen
 //
 
 #include <iostream>
@@ -33,15 +36,10 @@ void heapTest(T *data, int size) {
 }
 
 template<typename T>
-void drain(MaxHeap<T> heap) {
+void testDequeue(MaxHeap<T> heap) {
     // take them out (and check peek at the same time)
-    int prev = INT_MAX;
     while (!heap.empty()) {
-        if (heap.peek() > prev) {
-            cout << "out of order FAIL!!" << endl;
-            return;
-        }
-        prev = heap.peek();
+        T prev = heap.peek();
         if (prev != heap.dequeue()) {
             cout << "peek != dequeue FAIL!!" << endl;
             return;
@@ -53,7 +51,7 @@ template<typename T>
 void heapifyTest(T *data, int size) {
     MaxHeap<T> heap(data, size);
     cout << "Heapify test: " << (heap.isValid() ? "valid" : "INVALID") << endl;
-    drain(heap);
+    testDequeue(heap);
 }
 
 template<typename T>
@@ -100,18 +98,6 @@ int main() {
     heapTest<Importance>(impData,7);
     heapifyTest<Importance>(impData, 7);
     heapsortTest<Importance>(impData, 7, true);
-
-
-    /* FIXME: do timing in C++ like in this Java version
-     * FIXME: this would also require resize() with dynamic array
-    long start = System.nanoTime();
-    for (int n = 5_000; n < 100_000_000; n *= 2) {
-        heapsortTest(n, 100, false);
-        long end = System.nanoTime();
-        System.out.println(n + ": " + (end - start) / 1000_000_000.0);
-        start = end;
-    }
-    */
 
     return EXIT_SUCCESS;
 }
