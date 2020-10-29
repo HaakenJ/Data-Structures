@@ -72,10 +72,31 @@ void heapsortTest(int size, int range, bool print) {
 }
 
 int main() {
-    srand(time(nullptr));
-    randomTest(400, 100);
-    heapifyTest(1000, 100);
-    heapsortTest(50, 100, true);
+//    srand(time(nullptr));
+//    randomTest(400, 100);
+//    heapifyTest(1000, 100);
+//    heapsortTest(50, 100, true);
+
+    Heap h;
+
+    int arr[] = {9, 7, 19, 3, 0, 8, 14, 1, -4, 12, -1, 6, 2, 5, 11};
+
+    for (int i = 0; i < 15; i++) {
+        h.enqueue(arr[i]);
+
+    }
+    h.printData();
+    h.dequeue();
+    h.dequeue();
+
+    h.printData();
+
+    h.enqueue(3);
+    h.enqueue(4);
+
+    h.printData();
+
+
 
     /* FIXME: do timing in C++ like in this Java version
      * FIXME: this would also require resize() with dynamic array

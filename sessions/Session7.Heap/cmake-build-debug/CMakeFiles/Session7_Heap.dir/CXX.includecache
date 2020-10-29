@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/Heap.h
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/sessions/Session7.Heap/Heap.h
+iostream
+-
 
-D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/main.cpp
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/sessions/Session7.Heap/main.cpp
 iostream
 -
 ctime
 -
 Heap.h
-D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session7.Heap/Heap.h
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/sessions/Session7.Heap/Heap.h
 

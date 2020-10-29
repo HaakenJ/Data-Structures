@@ -154,3 +154,9 @@ bool Heap::isValid() {
     }
     return true;
 }
+
+void Heap::printData() {
+    for (int i = 0; i < size; i++)
+        std::cout << data[i] << " ";
+    std::cout << endl;
+}

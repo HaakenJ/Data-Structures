@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <iostream>
+
 /**
  * This Heap class implements a Priority Queue ADT of integers
  *
@@ -93,6 +95,8 @@ public:
      * @return true if every node is correct
      */
     bool isValid();
+
+    void printData();
 
 private:
     static const int ROOT = 0;
