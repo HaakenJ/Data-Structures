@@ -1,5 +1,6 @@
 //
 // Created by Kramer Johnson on 10/26/20.
+// kjohnson5@seattleu.edu
 // Seattle University, CPSC 5910 03 Fall 2020
 //
 // Build off MinHeap non-template tests
