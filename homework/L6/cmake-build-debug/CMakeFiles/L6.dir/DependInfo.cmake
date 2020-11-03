@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/main.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/cmake-build-debug/CMakeFiles/L6.dir/main.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/lab6.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L6/cmake-build-debug/CMakeFiles/L6.dir/lab6.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

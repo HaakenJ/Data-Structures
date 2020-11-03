@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L6
+CMAKE_SOURCE_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L6\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L6\cmake-build-debug\CMakeFiles D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L6\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L6\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,44 +130,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named L6
+# Target rules for targets named p4
 
 # Build rule for target.
-L6: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 L6
-.PHONY : L6
+p4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 p4
+.PHONY : p4
 
 # fast build rule for target.
-L6/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L6.dir\build.make CMakeFiles/L6.dir/build
-.PHONY : L6/fast
+p4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/build
+.PHONY : p4/fast
 
-lab6.obj: lab6.cpp.obj
+Patient.obj: Patient.cpp.obj
 
-.PHONY : lab6.obj
+.PHONY : Patient.obj
 
 # target to build an object file
-lab6.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L6.dir\build.make CMakeFiles/L6.dir/lab6.cpp.obj
-.PHONY : lab6.cpp.obj
+Patient.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/Patient.cpp.obj
+.PHONY : Patient.cpp.obj
 
-lab6.i: lab6.cpp.i
+Patient.i: Patient.cpp.i
 
-.PHONY : lab6.i
+.PHONY : Patient.i
 
 # target to preprocess a source file
-lab6.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L6.dir\build.make CMakeFiles/L6.dir/lab6.cpp.i
-.PHONY : lab6.cpp.i
+Patient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/Patient.cpp.i
+.PHONY : Patient.cpp.i
 
-lab6.s: lab6.cpp.s
+Patient.s: Patient.cpp.s
 
-.PHONY : lab6.s
+.PHONY : Patient.s
 
 # target to generate assembly for a file
-lab6.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L6.dir\build.make CMakeFiles/L6.dir/lab6.cpp.s
-.PHONY : lab6.cpp.s
+Patient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/Patient.cpp.s
+.PHONY : Patient.cpp.s
+
+PatientPriorityQueue.obj: PatientPriorityQueue.cpp.obj
+
+.PHONY : PatientPriorityQueue.obj
+
+# target to build an object file
+PatientPriorityQueue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/PatientPriorityQueue.cpp.obj
+.PHONY : PatientPriorityQueue.cpp.obj
+
+PatientPriorityQueue.i: PatientPriorityQueue.cpp.i
+
+.PHONY : PatientPriorityQueue.i
+
+# target to preprocess a source file
+PatientPriorityQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/PatientPriorityQueue.cpp.i
+.PHONY : PatientPriorityQueue.cpp.i
+
+PatientPriorityQueue.s: PatientPriorityQueue.cpp.s
+
+.PHONY : PatientPriorityQueue.s
+
+# target to generate assembly for a file
+PatientPriorityQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/PatientPriorityQueue.cpp.s
+.PHONY : PatientPriorityQueue.cpp.s
+
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -177,10 +231,16 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... L6
-	@echo ... lab6.obj
-	@echo ... lab6.i
-	@echo ... lab6.s
+	@echo ... p4
+	@echo ... Patient.obj
+	@echo ... Patient.i
+	@echo ... Patient.s
+	@echo ... PatientPriorityQueue.obj
+	@echo ... PatientPriorityQueue.i
+	@echo ... PatientPriorityQueue.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
