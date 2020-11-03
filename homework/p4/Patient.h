@@ -24,7 +24,6 @@ public:
     }
 private:
     static int patientNumber;
-//    enum priority {immediate = 1, emergency = 2, urgent = 3, minimal = 4};
     std::map<std::string, int> priority = {
             {"immediate", 1},
             {"emergency", 2},
@@ -34,7 +33,6 @@ private:
     std::string name;
     std::string priorityCode;
     int arrivalOrder;
-
 };
 
 
