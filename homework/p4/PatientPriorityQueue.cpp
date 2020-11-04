@@ -36,6 +36,12 @@ const Patient & PatientPriorityQueue::peek() const {
     return data[0];
 }
 
+const Patient &PatientPriorityQueue::peek(int index) const {
+    if (empty())
+        throw std::invalid_argument("empty queue");
+    return data[index];
+}
+
 void PatientPriorityQueue::heapify() {
     // starting at last parent, work backwards to root, causing every subtree
     // to be made into a heap
@@ -103,4 +109,8 @@ bool PatientPriorityQueue::isValid() {
             return false;
     }
     return true;
+}
+
+int PatientPriorityQueue::size() const {
+    return data.size();
 }

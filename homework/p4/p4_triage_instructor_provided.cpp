@@ -44,7 +44,9 @@ void help() {
  * Prints welcome message.
  */
 void welcome() {
-    // TODO
+    cout << "******** Welcome to Patient Triage 2020 ********" << endl;
+    cout << "       Enter 'Help' to see your options or      " << endl;
+    cout << "             enter an option to start           " << endl;
 }
 
 /**

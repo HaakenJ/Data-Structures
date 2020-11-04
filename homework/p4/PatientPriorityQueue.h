@@ -54,6 +54,19 @@ public:
     const Patient &peek() const;
 
     /**
+     * Fetch the element at an index in the heap.
+     * @param index index of the element to retrieve
+     * @return      the least element
+     */
+    const Patient &peek(int index) const;
+
+    /**
+     * Get the number of patients still waiting
+     * @return number of patients in queue
+     */
+     int size() const;
+
+    /**
      * Check if the heap invariants are true for every node.
      *
      * @return true if every node is correct

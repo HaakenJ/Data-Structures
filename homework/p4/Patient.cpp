@@ -37,3 +37,7 @@ std::string Patient::toString() const {
 }
 
 int Patient::patientNumber = 0;
+
+std::string Patient::getName() const {
+    return name;
+}

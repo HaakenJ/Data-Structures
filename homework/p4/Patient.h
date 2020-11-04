@@ -14,10 +14,7 @@ public:
     Patient(const std::string &name, const std::string priorityCode);
     int compareTo(const Patient &other) const;
     std::string toString() const;
-
-    int getPatientNumer() {
-        return patientNumber;
-    }
+    std::string getName() const;
 
     int getArrivalNum() {
         return arrivalOrder;
