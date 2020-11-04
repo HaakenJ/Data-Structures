@@ -1,6 +1,10 @@
 //
-// Created by Haake on 11/2/2020.
+// Created by Kramer Johnson on 11/2/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 4
+// kjohnson5@seattleu.edu
 //
+
 
 #include "Patient.h"
 

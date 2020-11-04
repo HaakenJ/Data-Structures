@@ -10,7 +10,11 @@ using namespace std;
 // Created by Kevin Lundeen on 10/21/20.
 // For Seattle University, CPSC 5005, P4.Triage
 //
-// TODO: complete all indicated code
+// Code completed by Kramer Johnson on 11/2/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 4
+// kjohnson5@seattleu.edu
+//
 
 /**
  * Prints help menu.
@@ -177,7 +181,6 @@ void removePatientCmd(PatientPriorityQueue &priQueue) {
  */
 void showPatientListCmd(PatientPriorityQueue &priQueue) {
     cout << "# patients waiting: " << priQueue.size() << endl;
-    // TODO: shows patient detail in arbitrary heap order (root first)
     for (int i = 0; i < priQueue.size(); i++) {
         cout << priQueue.peek(i).toString() << endl;
     }
@@ -248,36 +251,6 @@ void execCommandsFromFileCmd(string filename, PatientPriorityQueue &priQueue) {
  * @return EXIT_SUCCESS
  */
 int main() {
-//    Patient p("Peter",   "minimal");
-//    Patient q("Quamp",   "immediate");
-//    Patient r("Richard", "immediate");
-//    Patient j("Jeremy",  "urgent");
-//    Patient e("Eric",    "emergency");
-//
-//    PatientPriorityQueue patientQueue;
-//
-//    patientQueue.enqueue(p);
-//    patientQueue.enqueue(q);
-//    patientQueue.enqueue(r);
-//    patientQueue.enqueue(j);
-//    patientQueue.enqueue(e);
-//
-//    cout << "Is this heap valid? " << (patientQueue.isValid() ? "Yes" : "No") << endl;
-//
-//    cout << "Should be Quamp: "     << patientQueue.dequeue().toString() << endl;
-//    cout << "Should be Richard: "   << patientQueue.dequeue().toString() << endl;
-//    cout << "Should be Eric: "      << patientQueue.dequeue().toString() << endl;
-//    cout << "Should be Jeremy: "    << patientQueue.dequeue().toString() << endl;
-//    cout << "Should be Peter: "     << patientQueue.dequeue().toString() << endl;
-//
-//    cout << "p->q: " << p.compareTo(q) << endl;
-//    cout << "q->p: " <<  q.compareTo(p) << endl;
-//
-//    cout << "p->r: " << p.compareTo(r) << endl;
-//    cout << "r->p: " <<  q.compareTo(p) << endl;
-//
-//    cout << "q->r: " <<  q.compareTo(r) << endl;
-//    cout << "r->q: " <<  r.compareTo(q) << endl;
 
     welcome();
 
