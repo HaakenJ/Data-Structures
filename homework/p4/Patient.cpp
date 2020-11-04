@@ -17,18 +17,23 @@ Patient::Patient(const std::string &n, const std::string p) {
 }
 
 int Patient::compareTo(const Patient &other) const {
-    if (priority.at(this->priorityCode) < priority.at(other.priorityCode))
+    if (priorMap.at(this->priorityCode) < priorMap.at(other.priorityCode))
         return -1;
-    else if (priority.at(this->priorityCode) > priority.at(other.priorityCode))
+    else if (priorMap.at(this->priorityCode) > priorMap.at(other.priorityCode))
         return 1;
     else if (this->arrivalOrder <= other.arrivalOrder)
         return -1;
-    return 1;
+    else
+        return 1;
 
 }
 
 std::string Patient::toString() const {
-    return std::__cxx11::string();
+    return name + " " + "{ pri=" +
+                    priorityCode +
+                    ", arrival=" +
+                    std::to_string(arrivalOrder) +
+                    " }";
 }
 
 int Patient::patientNumber = 0;

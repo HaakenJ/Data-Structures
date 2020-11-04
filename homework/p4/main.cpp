@@ -8,9 +8,9 @@ int main() {
     Patient q("Todd", "immediate");
     Patient r("Theodore", "immediate");
 
-    cout << p.getArrivalNum() << endl;
-    cout << q.getArrivalNum() << endl;
-    cout << r.getArrivalNum() << endl;
+    cout << p.toString() << endl;
+    cout << q.toString() << endl;
+    cout << r.toString() << endl;
 
     cout << "p->q: " << p.compareTo(q) << endl;
     cout << "q->p: " <<  q.compareTo(p) << endl;

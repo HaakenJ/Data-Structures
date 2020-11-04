@@ -24,7 +24,7 @@ public:
     }
 private:
     static int patientNumber;
-    std::map<std::string, int> priority = {
+    std::map<std::string, int> priorMap = {
             {"immediate", 1},
             {"emergency", 2},
             {"urgent", 3},
