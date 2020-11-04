@@ -4,9 +4,11 @@
 CMakeFiles/p4.dir/Patient.cpp.obj: ../Patient.cpp
 CMakeFiles/p4.dir/Patient.cpp.obj: ../Patient.h
 
+CMakeFiles/p4.dir/PatientPriorityQueue.cpp.obj: ../Patient.h
 CMakeFiles/p4.dir/PatientPriorityQueue.cpp.obj: ../PatientPriorityQueue.cpp
 CMakeFiles/p4.dir/PatientPriorityQueue.cpp.obj: ../PatientPriorityQueue.h
 
 CMakeFiles/p4.dir/main.cpp.obj: ../Patient.h
+CMakeFiles/p4.dir/main.cpp.obj: ../PatientPriorityQueue.h
 CMakeFiles/p4.dir/main.cpp.obj: ../main.cpp
 

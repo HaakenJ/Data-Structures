@@ -6,13 +6,27 @@
 
 #IncludeRegexTransform: 
 
-D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/Patient.cpp
-Patient.h
-D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/Patient.h
-
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/Patient.h
 iostream
 -
 map
 -
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/PatientPriorityQueue.h
+iostream
+-
+vector
+-
+stdexcept
+-
+Patient.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/Patient.h
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/main.cpp
+iostream
+-
+Patient.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/Patient.h
+PatientPriorityQueue.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4/PatientPriorityQueue.h
 
