@@ -1,11 +1,11 @@
 //
-// Created by Kramer Johnson on 10/26/20.
-// Seattle University, CPSC 5910 03 Fall 2020
+// Created by Haake on 11/2/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 4
 // kjohnson5@seattleu.edu
 //
-// Build off MinHeap non-template implementation
-// by Kevin Lundeen
-//
+// Built off of MaxHeap implementation by
+// Kevin Lundeen
 
 #pragma once
 
@@ -15,12 +15,11 @@
 #include "Patient.h"
 
 /**
- * This PatientPriorityQueue class implements a Priority Queue ADT of integers
+ * This PatientPriorityQueue class implements a Priority Queue ADT of Patients
  *
  * The priority queue enqueues items in any order, but the dequeue order
- * is determined by the natural ordering of the elements. The item dequeued
- * is always the maximum value of all the items currently in the priority
- * queue.
+ * is determined by the urgency of a patient's issue. The item dequeued
+ * is always the most urgent patient in the queue.
  */
 class PatientPriorityQueue {
 public:
@@ -30,32 +29,32 @@ public:
     PatientPriorityQueue();
 
     /**
-     * Add an element to the queue. Items need not be unique.
-     * @param newItem to add to the priority queue
+     * Add a Patient to the queue.
+     * @param newPatient to add to the priority queue
      */
-    void enqueue(const Patient &newItem);
+    void enqueue(const Patient &newPatient);
 
     /**
-     * Remove the greatest element from the queue.
-     * @return the greatest element
+     * Remove the most urgent Patient from the queue.
+     * @return the most urgent Patient
      */
     Patient dequeue();
 
     /**
-     * Check if there are any elements in the queue.
-     * @return true if there are no elements
+     * Check if there are Patients in the queue.
+     * @return true if there are no Patients
      */
     bool empty() const;
 
     /**
-     * Fetch the element that would be returned by dequeue.
-     * @return the least element
+     * Fetch the Patient that would be returned by dequeue.
+     * @return the most urgent Patient
      */
     const Patient &peek() const;
 
     /**
-     * Fetch the element at an index in the heap.
-     * @param index index of the element to retrieve
+     * Fetch the Patient at an index in the heap.
+     * @param index of the Patient to retrieve
      * @return      the least element
      */
     const Patient &peek(int index) const;
@@ -65,13 +64,6 @@ public:
      * @return number of patients in queue
      */
      int size() const;
-
-    /**
-     * Check if the heap invariants are true for every node.
-     *
-     * @return true if every node is correct
-     */
-    bool isValid();
 
 private:
     std::vector<Patient> data;

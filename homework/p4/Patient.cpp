@@ -10,7 +10,7 @@ Patient::Patient() {
     this->arrivalOrder = ++patientNumber;
 }
 
-Patient::Patient(const std::string &n, const std::string p) {
+Patient::Patient(const std::string &n, const std::string &p) {
     this->name = n;
     this-> priorityCode = p;
     this->arrivalOrder = ++patientNumber;
@@ -36,8 +36,8 @@ std::string Patient::toString() const {
                     " }";
 }
 
-int Patient::patientNumber = 0;
-
 std::string Patient::getName() const {
     return name;
 }
+
+int Patient::patientNumber = 0;

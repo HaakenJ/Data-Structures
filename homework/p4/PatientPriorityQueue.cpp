@@ -1,13 +1,18 @@
 //
 // Created by Haake on 11/2/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 4
+// kjohnson5@seattleu.edu
 //
+// Built off of MaxHeap implementation by
+// Kevin Lundeen
 
 #include "PatientPriorityQueue.h"
 
 PatientPriorityQueue::PatientPriorityQueue() = default;
 
-void PatientPriorityQueue::enqueue(const Patient &newItem) {
-    data.push_back(newItem);
+void PatientPriorityQueue::enqueue(const Patient &newPatient) {
+    data.push_back(newPatient);
     percolateUp(data.size() - 1);
 }
 
@@ -101,14 +106,6 @@ int PatientPriorityQueue::left(int parentIndex) {
 
 int PatientPriorityQueue::right(int parentIndex) {
     return left(parentIndex) + 1;
-}
-
-bool PatientPriorityQueue::isValid() {
-    for (int i = data.size() - 1; i > 0; i--) {
-        if (data[parent(i)].compareTo(data[i]) > 0)
-            return false;
-    }
-    return true;
 }
 
 int PatientPriorityQueue::size() const {
