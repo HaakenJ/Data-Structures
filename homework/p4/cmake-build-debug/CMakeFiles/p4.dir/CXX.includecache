@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/Patient.cpp
-Patient.h
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/Patient.h
-
 C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/Patient.h
 iostream
 -
 map
 -
-
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/PatientPriorityQueue.cpp
-PatientPriorityQueue.h
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/PatientPriorityQueue.h
 
 C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4/PatientPriorityQueue.h
 iostream

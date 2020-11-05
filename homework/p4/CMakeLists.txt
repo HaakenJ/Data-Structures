@@ -3,4 +3,4 @@ project(p4)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(p4 main.cpp Patient.cpp Patient.h PatientPriorityQueue.cpp PatientPriorityQueue.h)
+add_executable(p4 p4.cpp Patient.cpp Patient.h PatientPriorityQueue.cpp PatientPriorityQueue.h)

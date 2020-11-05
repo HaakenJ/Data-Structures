@@ -5,6 +5,7 @@
 // kjohnson5@seattleu.edu
 //
 
+
 #include "Patient.h"
 
 Patient::Patient() {
@@ -44,3 +45,7 @@ std::string Patient::getName() const {
 }
 
 int Patient::patientNumber = 0;
+
+int Patient::getArrivalOrder() const {
+    return arrivalOrder;
+}

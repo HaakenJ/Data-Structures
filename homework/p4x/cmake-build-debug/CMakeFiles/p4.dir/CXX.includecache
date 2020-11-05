@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+iostream
+-
+map
+-
+
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/PatientPriorityQueue.h
+iostream
+-
+vector
+-
+stdexcept
+-
+Patient.h
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/main.cpp
+fstream
+-
+iostream
+-
+string
+-
+Patient.h
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+PatientPriorityQueue.h
+C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/PatientPriorityQueue.h
+

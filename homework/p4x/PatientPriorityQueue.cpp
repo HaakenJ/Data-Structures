@@ -105,3 +105,21 @@ int PatientPriorityQueue::right(int parentIndex) {
 int PatientPriorityQueue::size() const {
     return data.size();
 }
+
+void PatientPriorityQueue::update(int arrivalID, const std::string &newPriority) {
+    try {
+        Patient oldPatient = removePatientByArrival(arrivalID);
+    } catch (std::exception const &exc) {
+        throw exc;
+    }
+
+    
+}
+
+Patient PatientPriorityQueue::removePatientByArrival(int arrivalID) {
+    for (const auto &patient : data) {
+        if (patient.getArrivalOrder() == arrivalID)
+            return patient;
+    }
+    throw std::invalid_argument("Patient not found");
+}

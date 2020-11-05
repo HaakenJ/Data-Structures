@@ -186,6 +186,53 @@ void showPatientListCmd(PatientPriorityQueue &priQueue) {
     }
 }
 
+/**
+ * Changes the priority of a patient in the waiting room.
+ * @param line     command line
+ * @param priQueue queue to manipulate
+ */
+//void changePatientCmd(string line, PatientPriorityQueue &priQueue) {
+//    string arrivalIDStr, newPriority;
+//
+//    // get priority and name
+//    arrivalIDStr = delimitBySpace(line);
+//    if (arrivalIDStr.length() == 0) {
+//        cout << "Error: no patient id provided." << endl;
+//        return;
+//    }
+//    newPriority = line;
+//    if (newPriority.length() == 0) {
+//        cout << "Error: no priority code given." << endl;
+//        return;
+//    }
+//
+//    // trim whitespace from name and priority
+//    arrivalIDStr = rtrim(ltrim(arrivalIDStr));
+//    newPriority = rtrim(ltrim(newPriority));
+//
+//    // convert arrivalID to int
+//    int arrivalID = stoi(arrivalIDStr);
+//
+//    // determine if priority is valid
+//    if (
+//            newPriority != "immediate" &&
+//            newPriority != "emergency" &&
+//            newPriority != "urgent"    &&
+//            newPriority != "minimal"
+//            )
+//    {
+//        cout << "Error: priority is invalid." << endl;
+//        return;
+//    }
+//
+//    // add patient
+//    Patient newPatient(name, priority);
+//    priQueue.enqueue(newPatient);
+//    cout << "Added patient \"";
+//    cout << newPatient.getName();
+//    cout << "\" to the priority system" << endl;
+//}
+
 // forward declare:
 void execCommandsFromFileCmd(string filename, PatientPriorityQueue &priQueue);
 
