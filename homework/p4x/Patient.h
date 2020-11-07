@@ -32,6 +32,15 @@ public:
     Patient(const std::string &name, const std::string &priorityCode);
 
     /**
+     * Ctor that takes a patient's name, priority, and arrival order
+     * The ctor does not increment the number of patients
+     * @param name         the name of the patient
+     * @param priorityCode the priority of the patient
+     * @param arrivalOrder the arrival order of the patient
+     */
+    Patient(const std::string &name, const std::string &priorityCode, int arrivalOrder);
+
+    /**
      * Compares two Patients to see which patient is more urgent
      * @param other the Patient to compare this Patient to
      * @return      -1 if this Patient is more urgent,
@@ -57,6 +66,12 @@ public:
      * @return the arrival order of this Patient
      */
      int getArrivalOrder() const;
+
+     /**
+     * Get this Patient's priority code
+     * @return the priority code of this Patient
+     */
+     std::string getPriorityCode() const;
 
 private:
     // The number of total Patient instances

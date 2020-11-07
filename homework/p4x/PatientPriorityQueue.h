@@ -69,8 +69,9 @@ public:
      * Update a Patient's priority
      * @param arrivalID   the arrival number for the Patient
      * @param newPriority the new priority for the Patient
+     * @return            the new patient
      */
-    void update(int arrivalID, const std::string &newPriority);
+    Patient update(int arrivalID, const std::string &newPriority);
 
 private:
     std::vector<Patient> data;

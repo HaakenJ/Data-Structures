@@ -58,19 +58,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-Structures\homework\p4
+CMAKE_SOURCE_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-Structures\homework\p4\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-St
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -89,7 +89,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kjohnson\Desktop\Kramer\seattle_u_coursework\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p4\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -196,32 +196,32 @@ PatientPriorityQueue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/PatientPriorityQueue.cpp.s
 .PHONY : PatientPriorityQueue.cpp.s
 
-main.obj: main.cpp.obj
+p4.obj: p4.cpp.obj
 
-.PHONY : main.obj
+.PHONY : p4.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+p4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/p4.cpp.obj
+.PHONY : p4.cpp.obj
 
-main.i: main.cpp.i
+p4.i: p4.cpp.i
 
-.PHONY : main.i
+.PHONY : p4.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.i
-.PHONY : main.cpp.i
+p4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/p4.cpp.i
+.PHONY : p4.cpp.i
 
-main.s: main.cpp.s
+p4.s: p4.cpp.s
 
-.PHONY : main.s
+.PHONY : p4.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/main.cpp.s
-.PHONY : main.cpp.s
+p4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p4.dir\build.make CMakeFiles/p4.dir/p4.cpp.s
+.PHONY : p4.cpp.s
 
 # Help Target
 help:
@@ -238,9 +238,9 @@ help:
 	@echo ... PatientPriorityQueue.obj
 	@echo ... PatientPriorityQueue.i
 	@echo ... PatientPriorityQueue.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... p4.obj
+	@echo ... p4.i
+	@echo ... p4.s
 .PHONY : help
 
 

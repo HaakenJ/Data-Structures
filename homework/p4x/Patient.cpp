@@ -14,10 +14,16 @@ Patient::Patient() {
     this->arrivalOrder = ++patientNumber;
 }
 
-Patient::Patient(const std::string &n, const std::string &p) {
-    this->name = n;
-    this-> priorityCode = p;
+Patient::Patient(const std::string &name, const std::string &priorityCode) {
+    this->name = name;
+    this-> priorityCode = priorityCode;
     this->arrivalOrder = ++patientNumber;
+}
+
+Patient::Patient(const std::string &name, const std::string &priorityCode, int arrivalOrder) {
+    this->name = name;
+    this-> priorityCode = priorityCode;
+    this->arrivalOrder = arrivalOrder;
 }
 
 int Patient::compareTo(const Patient &other) const {
@@ -48,4 +54,8 @@ int Patient::patientNumber = 0;
 
 int Patient::getArrivalOrder() const {
     return arrivalOrder;
+}
+
+std::string Patient::getPriorityCode() const {
+    return priorityCode;
 }

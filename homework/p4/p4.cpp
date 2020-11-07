@@ -57,6 +57,7 @@ void welcome() {
  * Prints farewell message.
  */
 void goodbye() {
+    cout << endl;
     cout << "****** Thank you for using Patient Triage ******" << endl;
     cout << "                   Goodbye!                     " << endl;
 }

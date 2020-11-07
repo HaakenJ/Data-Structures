@@ -19,14 +19,10 @@ void PatientPriorityQueue::enqueue(const Patient &newPatient) {
 Patient PatientPriorityQueue::dequeue() {
     Patient ret = peek();
 
-    // get last val in heap, copy value to index 0 and decrease size
+    // get last val in heap, copy value to index 0
     data[0] = data[data.size() - 1];
     data.pop_back();
-    // NOTE: add this to sort in place: data[size] = ret;
 
-    // create a recursive helper, percolateDown,
-    // that allows you move the removed val
-    // in the right place
     percolateDown(0);
     return ret;
 }
@@ -106,20 +102,28 @@ int PatientPriorityQueue::size() const {
     return data.size();
 }
 
-void PatientPriorityQueue::update(int arrivalID, const std::string &newPriority) {
+Patient PatientPriorityQueue::update(int arrivalID, const std::string &newPriority) {
     try {
         Patient oldPatient = removePatientByArrival(arrivalID);
+        Patient newPatient(oldPatient.getName(), newPriority, arrivalID);
+        enqueue(newPatient);
+        return newPatient;
     } catch (std::exception const &exc) {
         throw exc;
     }
-
-    
 }
 
 Patient PatientPriorityQueue::removePatientByArrival(int arrivalID) {
-    for (const auto &patient : data) {
-        if (patient.getArrivalOrder() == arrivalID)
-            return patient;
+    for (int i = 0; i < data.size(); i++) {
+        if (data[i].getArrivalOrder() == arrivalID) {
+            Patient result = data[i];
+
+            // remove the value at index i
+            data[i] = data[data.size() - 1];
+            data.pop_back();
+            percolateDown(i);
+            return result;
+        }
     }
     throw std::invalid_argument("Patient not found");
 }

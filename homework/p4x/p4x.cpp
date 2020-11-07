@@ -1,11 +1,3 @@
-#include <fstream>
-#include <iostream>
-#include <string>
-#include "Patient.h"
-#include "PatientPriorityQueue.h"
-
-using namespace std;
-
 //
 // Created by Kevin Lundeen on 10/21/20.
 // For Seattle University, CPSC 5005, P4.Triage
@@ -15,6 +7,17 @@ using namespace std;
 // Project 4
 // kjohnson5@seattleu.edu
 //
+// change and save commands added by Kramer Johnson
+//
+
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include "Patient.h"
+#include "PatientPriorityQueue.h"
+
+using namespace std;
 
 /**
  * Prints help menu.
@@ -38,7 +41,16 @@ void help() {
          << endl
          << "            in the order that they have arrived."
          << endl
+         << "change <arrival-id> <new-priority-code>" << endl
+         << "            <arrival-id> the arrival order of the patient retrieved from the"
+         << endl
+         << "            list command"
+         << endl
+         << "            updates a patient's priority code that is already in the system."
+         << endl
          << "load <file> Reads the file and executes the command on each line"
+         << endl
+         << "save <file> Saves the current patient triage to the file"
          << endl
          << "help        Displays this menu" << endl
          << "quit        Exits the program" << endl;
@@ -57,6 +69,7 @@ void welcome() {
  * Prints farewell message.
  */
 void goodbye() {
+    cout << endl;
     cout << "****** Thank you for using Patient Triage ******" << endl;
     cout << "                   Goodbye!                     " << endl;
 }
@@ -191,50 +204,113 @@ void showPatientListCmd(PatientPriorityQueue &priQueue) {
  * @param line     command line
  * @param priQueue queue to manipulate
  */
-//void changePatientCmd(string line, PatientPriorityQueue &priQueue) {
-//    string arrivalIDStr, newPriority;
-//
-//    // get priority and name
-//    arrivalIDStr = delimitBySpace(line);
-//    if (arrivalIDStr.length() == 0) {
-//        cout << "Error: no patient id provided." << endl;
-//        return;
-//    }
-//    newPriority = line;
-//    if (newPriority.length() == 0) {
-//        cout << "Error: no priority code given." << endl;
-//        return;
-//    }
-//
-//    // trim whitespace from name and priority
-//    arrivalIDStr = rtrim(ltrim(arrivalIDStr));
-//    newPriority = rtrim(ltrim(newPriority));
-//
-//    // convert arrivalID to int
-//    int arrivalID = stoi(arrivalIDStr);
-//
-//    // determine if priority is valid
-//    if (
-//            newPriority != "immediate" &&
-//            newPriority != "emergency" &&
-//            newPriority != "urgent"    &&
-//            newPriority != "minimal"
-//            )
-//    {
-//        cout << "Error: priority is invalid." << endl;
-//        return;
-//    }
-//
-//    // add patient
-//    Patient newPatient(name, priority);
-//    priQueue.enqueue(newPatient);
-//    cout << "Added patient \"";
-//    cout << newPatient.getName();
-//    cout << "\" to the priority system" << endl;
-//}
+void changePatientCmd(string line, PatientPriorityQueue &priQueue) {
+    string arrivalIDStr, newPriority;
+
+    // get priority and name
+    arrivalIDStr = delimitBySpace(line);
+    if (arrivalIDStr.length() == 0) {
+        cout << "Error: no patient id provided." << endl;
+        return;
+    }
+    newPriority = line;
+    if (newPriority.length() == 0) {
+        cout << "Error: no priority code given." << endl;
+        return;
+    }
+
+    // trim whitespace from name and priority
+    arrivalIDStr = rtrim(ltrim(arrivalIDStr));
+    newPriority = rtrim(ltrim(newPriority));
+
+    // determine if arrivalIDStr is an integer
+    for (char &c : arrivalIDStr) {
+        if (!isdigit(c)) {
+            cout << "Error: invalid arrival code provided." << endl;
+            return;
+        }
+    }
+    // convert arrivalID to int
+    int arrivalID = stoi(arrivalIDStr);
+
+    // determine if priority is valid
+    if (
+            newPriority != "immediate" &&
+            newPriority != "emergency" &&
+            newPriority != "urgent"    &&
+            newPriority != "minimal"
+            )
+    {
+        cout << "Error: priority is invalid." << endl;
+        return;
+    }
+
+    try {
+        Patient newPatient = priQueue.update(arrivalID, newPriority);
+        cout << "Chaned patient \"";
+        cout << newPatient.getName();
+        cout << "\"'s priority to ";
+        cout << newPriority << endl;
+    } catch (std::exception const &exc) {
+        cout << "Error: no patient with the given id was found" << endl;
+    }
+}
 
 // forward declare:
 void execCommandsFromFileCmd(string filename, PatientPriorityQueue &priQueue);
+
+/**
+ * Comparator function for sorting by arrival
+ */
+bool compareArrivals(Patient p1, Patient p2) {
+    return (p1.getArrivalOrder() < p2.getArrivalOrder());
+}
+
+/**
+ * Saves patient triage to file
+ * @param line     command line
+ * @param priQueue queue to save
+ */
+void savePatientCmd(string line, PatientPriorityQueue &priQueue) {
+    string fileName;
+
+    // get priority and name
+    fileName = delimitBySpace(line);
+    if (fileName.length() == 0) {
+        cout << "Error: no file name provided." << endl;
+        return;
+    }
+
+    // create new vector to store the triage for saving
+    vector<Patient> triage;
+
+    // empty priQueue into triage vector
+    while (!priQueue.empty()) {
+        triage.push_back(priQueue.dequeue());
+    }
+
+    // sort the triage by arrival order
+    sort(triage.begin(), triage.end(), compareArrivals);
+
+    ofstream fileTriage;
+
+    fileTriage.open(fileName);
+
+    if (fileTriage) {
+        for (auto & patient : triage) {
+            fileTriage << "add ";
+            fileTriage << patient.getPriorityCode() << " ";
+            fileTriage << patient.getName() << "\n";
+        }
+    } else {
+        // Filepath was invalid, exit application
+        cout << "ERROR: cannot open/create patient triage file";
+        return;
+    }
+
+    // Cleanup
+    fileTriage.close();
+}
 
 /**
  * Process the line entered from the user or read from a file.
@@ -265,6 +341,10 @@ bool processLine(string line, PatientPriorityQueue &priQueue) {
         execCommandsFromFileCmd(line, priQueue);
     else if (cmd == "quit")
         return false;
+    else if (cmd == "change")
+        changePatientCmd(line, priQueue);
+    else if (cmd == "save")
+        savePatientCmd(line, priQueue);
     else
         cout << "Error: unrecognized command: " << cmd << endl;
 

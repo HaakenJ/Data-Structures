@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/Patient.h
 iostream
 -
 map
 -
 
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/PatientPriorityQueue.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/PatientPriorityQueue.h
 iostream
 -
 vector
@@ -20,17 +20,19 @@ vector
 stdexcept
 -
 Patient.h
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/Patient.h
 
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/main.cpp
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/p4x.cpp
 fstream
 -
 iostream
 -
 string
 -
+algorithm
+-
 Patient.h
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/Patient.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/Patient.h
 PatientPriorityQueue.h
-C:/Users/kjohnson/Desktop/Kramer/seattle_u_coursework/Data-Structures/homework/p4x/PatientPriorityQueue.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p4x/PatientPriorityQueue.h
 
