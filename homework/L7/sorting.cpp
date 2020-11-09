@@ -33,7 +33,7 @@ void brutesort(RandomArray &ra) {
         ra.shuffle();
 }
 
-void testAndTime(int n) {
+void testAndTime(int n, bool insrtFlag = false) {
     // create random array of n elements
     RandomArray ra(n);
 
@@ -43,12 +43,12 @@ void testAndTime(int n) {
 
     cout << "sorting " << n << " values:" << endl;
 
-    // time and display quicksort
+    // time and display merge sort
     start = high_resolution_clock::now();
-    Sort<int>::quick(ra.array, ra.size);
+    Sort<int>::merge(ra.array, ra.size);
     end = high_resolution_clock::now();
     ms = duration_cast<milliseconds>(end - start);
-    cout << "quicksort elapsed time: ";
+    cout << "merge sort elapsed time: ";
     cout << ms.count() << "ms" << endl;
 
     ra.shuffle(); // reshuffle array
@@ -63,12 +63,12 @@ void testAndTime(int n) {
 
     ra.shuffle();
 
-    // time and display merge sort
+    // time and display quicksort
     start = high_resolution_clock::now();
-    Sort<int>::merge(ra.array, ra.size);
+    Sort<int>::quick(ra.array, ra.size);
     end = high_resolution_clock::now();
     ms = duration_cast<milliseconds>(end - start);
-    cout << "merge sort elapsed time: ";
+    cout << "quicksort elapsed time: ";
     cout << ms.count() << "ms" << endl;
 
     ra.shuffle();
@@ -81,16 +81,21 @@ void testAndTime(int n) {
     cout << "STL's introsort elapsed time: ";
     cout << ms.count() << "ms" << endl;
 
-    ra.shuffle();
+    // only run insertion sort if insrtFlag is true
+    if (insrtFlag) {
 
-    // time and display insertion sort
-    start = high_resolution_clock::now();
-    Sort<int>::insertion(ra.array, ra.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);
-    cout << "insertion sort elapsed time: ";
-    cout << ms.count() << "ms" << endl;
+        ra.shuffle();
 
+        // time and display insertion sort
+        start = high_resolution_clock::now();
+        Sort<int>::insertion(ra.array, ra.size);
+        end = high_resolution_clock::now();
+        ms = duration_cast<milliseconds>(end - start);
+        cout << "insertion sort elapsed time: ";
+        cout << ms.count() << "ms" << endl;
+    }
+
+    cout << endl;
 }
 
 /**
@@ -99,11 +104,25 @@ void testAndTime(int n) {
  */
 int main() {
 
-    testAndTime(40000);
-    cout << endl;
-    testAndTime(80000);
-    cout << endl;
-    testAndTime(160000);
+    testAndTime(40000, true);
+
+    testAndTime(80000, true);
+
+    testAndTime(160000, true);
+
+    testAndTime(320000, true);
+
+    testAndTime(640000);
+
+    testAndTime(1280000);
+
+    testAndTime(2560000);
+
+    testAndTime(5120000);
+
+    testAndTime(10240000);
+
+    testAndTime(20480000);
 
 
     return EXIT_SUCCESS;
