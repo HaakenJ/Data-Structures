@@ -33,136 +33,77 @@ void brutesort(RandomArray &ra) {
         ra.shuffle();
 }
 
+void testAndTime(int n) {
+    // create random array of n elements
+    RandomArray ra(n);
+
+    // create timing objects
+    high_resolution_clock::time_point start, end;
+    milliseconds ms;
+
+    cout << "sorting " << n << " values:" << endl;
+
+    // time and display quicksort
+    start = high_resolution_clock::now();
+    Sort<int>::quick(ra.array, ra.size);
+    end = high_resolution_clock::now();
+    ms = duration_cast<milliseconds>(end - start);
+    cout << "quicksort elapsed time: ";
+    cout << ms.count() << "ms" << endl;
+
+    ra.shuffle(); // reshuffle array
+
+    // time and display heap sort
+    start = high_resolution_clock::now();
+    Sort<int>::heap(ra.array, ra.size);
+    end = high_resolution_clock::now();
+    ms = duration_cast<milliseconds>(end - start);
+    cout << "heap sort elapsed time: ";
+    cout << ms.count() << "ms" << endl;
+
+    ra.shuffle();
+
+    // time and display merge sort
+    start = high_resolution_clock::now();
+    Sort<int>::merge(ra.array, ra.size);
+    end = high_resolution_clock::now();
+    ms = duration_cast<milliseconds>(end - start);
+    cout << "merge sort elapsed time: ";
+    cout << ms.count() << "ms" << endl;
+
+    ra.shuffle();
+
+    // time and display introsort
+    start = high_resolution_clock::now();
+    Sort<int>::introspective(ra.array, ra.size);
+    end = high_resolution_clock::now();
+    ms = duration_cast<milliseconds>(end - start);
+    cout << "STL's introsort elapsed time: ";
+    cout << ms.count() << "ms" << endl;
+
+    ra.shuffle();
+
+    // time and display insertion sort
+    start = high_resolution_clock::now();
+    Sort<int>::insertion(ra.array, ra.size);
+    end = high_resolution_clock::now();
+    ms = duration_cast<milliseconds>(end - start);
+    cout << "insertion sort elapsed time: ";
+    cout << ms.count() << "ms" << endl;
+
+}
+
 /**
  * Main entry point of sorting tests.
  * @return EXIT_SUCCESS
  */
 int main() {
 
-    high_resolution_clock::time_point start, end;
-    milliseconds ms;
-
-
-    // FIXME: what you want to time goes here
-
-
-    RandomArray x(10000);
-    printAndTest("a random array  ", x);
-
-    // introspective (C++ STL)
+    testAndTime(40000);
     cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::introspective(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("introsorted     ", x);
-    Sort<int>::introspective(x.array, x.size);
-    printAndTest("sort of sorted  ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // quicksort
+    testAndTime(80000);
     cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::quick(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("quicksorted     ", x);
-    Sort<int>::quick(x.array, x.size);
-    printAndTest("sort of sorted  ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // merge sort
-    cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::merge(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("merge sorted    ", x);
-    Sort<int>::merge(x.array, x.size);
-    printAndTest("sort of sorted  ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // heap sort
-    cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::heap(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("heap sorted     ", x);
-    Sort<int>::heap(x.array, x.size);
-    printAndTest("sort of sorted  ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // insertion sort
-    cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::insertion(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("insertion sorted", x);
-    Sort<int>::insertion(x.array, x.size);
-    printAndTest("sort of sorted  ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // selection sort
-    cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::selection(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("selection sorted", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-    // bubble sort
-    cout << endl;
-
-    start = high_resolution_clock::now();
-    Sort<int>::bubble(x.array, x.size);
-    end = high_resolution_clock::now();
-    ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-    cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-    printAndTest("bubble sorted   ", x);
-    x.shuffle();
-    printAndTest("reshuffled      ", x);
-
-
-    // brute sort!
-    if (x.size <= 12) {
-        cout << endl;
-
-        start = high_resolution_clock::now();
-        brutesort(x);  // O(n!)
-        end = high_resolution_clock::now();
-        ms = duration_cast<milliseconds>(end - start);  // converts nanoseconds to ms
-        cout << "elapsed time: " << ms.count() << "ms" << endl;
-
-        printAndTest("brutesorted     ", x);
-    }
+    testAndTime(160000);
 
 
     return EXIT_SUCCESS;
