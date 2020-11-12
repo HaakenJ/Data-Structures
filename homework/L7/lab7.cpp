@@ -1,7 +1,8 @@
-//
-// Created by Kevin Lundeen on 10/29/20.
-// For Seattle University, CPSC 5005, Session 8.
-//
+// This is a program to test the runtimes of various
+// sorting algorithms
+// @author Kramer Johnson
+// Course CPSC 5910-03
+// 11/07/2020 (Fall Quarter 2020)
 
 #include <iostream>
 #include <chrono>
@@ -11,28 +12,10 @@ using namespace std;
 using namespace std::chrono;
 
 /**
- * Print out a line with the given array and whether or not it is sorted.
- * @param title  caption to print before array
- * @param ra     array to print and check
+ * Function to time different sorting algorithms for a given array size
+ * @param n         number of elements in the random integer array
+ * @param insrtFlag true if insertion sort should be tested, false otherwise
  */
-void printAndTest(string title, RandomArray &ra) {
-    cout << title << ": "
-         << ra.toString()
-         << (ra.isSorted() ? "" : "not " ) << "sorted"
-         << endl;
-}
-
-/**
- * Silly O(n!) brute force approach to sorting.
- * Don't try this with much more than 10-12 elements if you ever want it to
- * finish!
- * @param ra array to sort
- */
-void brutesort(RandomArray &ra) {
-    while (!ra.isSorted())
-        ra.shuffle();
-}
-
 void testAndTime(int n, bool insrtFlag = false) {
     // create random array of n elements
     RandomArray ra(n);

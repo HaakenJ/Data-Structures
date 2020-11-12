@@ -3,4 +3,4 @@ project(L7)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(L7 RandomArray.cpp RandomArray.h Sort.h sorting.cpp)
+add_executable(L7 RandomArray.cpp RandomArray.h Sort.h lab7.cpp)
