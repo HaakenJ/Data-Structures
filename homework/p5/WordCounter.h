@@ -110,7 +110,20 @@ private:
 
     int hashWord(const std::string &word);
 
-    static bool isPrime();
+    /**
+     * Determines if a number is prime
+     * @param n an integer
+     * @return  true if n is prime, false otherwise
+     */
+    static bool isPrime(int n);
+
+    /**
+     * Gets the next closest prime number after n
+     * @precon  n is not a prime number
+     * @param n a non-prime integer
+     * @return  the next prime number occuring after n
+     */
+    static int getNextPrime(int n);
 };
 
 
