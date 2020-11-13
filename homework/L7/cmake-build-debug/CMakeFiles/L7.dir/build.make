@@ -89,29 +89,29 @@ CMakeFiles/L7.dir/RandomArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/L7.dir/RandomArray.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\RandomArray.cpp -o CMakeFiles\L7.dir\RandomArray.cpp.s
 
-CMakeFiles/L7.dir/sorting.cpp.obj: CMakeFiles/L7.dir/flags.make
-CMakeFiles/L7.dir/sorting.cpp.obj: ../sorting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/L7.dir/sorting.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\L7.dir\sorting.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\sorting.cpp
+CMakeFiles/L7.dir/lab7.cpp.obj: CMakeFiles/L7.dir/flags.make
+CMakeFiles/L7.dir/lab7.cpp.obj: ../lab7.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/L7.dir/lab7.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\L7.dir\lab7.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\lab7.cpp
 
-CMakeFiles/L7.dir/sorting.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/L7.dir/sorting.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\sorting.cpp > CMakeFiles\L7.dir\sorting.cpp.i
+CMakeFiles/L7.dir/lab7.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/L7.dir/lab7.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\lab7.cpp > CMakeFiles\L7.dir\lab7.cpp.i
 
-CMakeFiles/L7.dir/sorting.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/L7.dir/sorting.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\sorting.cpp -o CMakeFiles\L7.dir\sorting.cpp.s
+CMakeFiles/L7.dir/lab7.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/L7.dir/lab7.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\L7\lab7.cpp -o CMakeFiles\L7.dir\lab7.cpp.s
 
 # Object files for target L7
 L7_OBJECTS = \
 "CMakeFiles/L7.dir/RandomArray.cpp.obj" \
-"CMakeFiles/L7.dir/sorting.cpp.obj"
+"CMakeFiles/L7.dir/lab7.cpp.obj"
 
 # External object files for target L7
 L7_EXTERNAL_OBJECTS =
 
 L7.exe: CMakeFiles/L7.dir/RandomArray.cpp.obj
-L7.exe: CMakeFiles/L7.dir/sorting.cpp.obj
+L7.exe: CMakeFiles/L7.dir/lab7.cpp.obj
 L7.exe: CMakeFiles/L7.dir/build.make
 L7.exe: CMakeFiles/L7.dir/linklibs.rsp
 L7.exe: CMakeFiles/L7.dir/objects1.rsp

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/L7.dir/RandomArray.cpp.obj"
-  "CMakeFiles/L7.dir/sorting.cpp.obj"
+  "CMakeFiles/L7.dir/lab7.cpp.obj"
   "L7.exe"
   "L7.exe.manifest"
   "L7.pdb"

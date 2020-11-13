@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_notes/data_structures/homework/L4/IntBST.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/homework/L4/cmake-build-debug/CMakeFiles/Session5_IntBST.dir/IntBST.cpp.obj"
-  "D:/Haake/Documents/seattle_u_notes/data_structures/homework/L4/intBST_test.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/homework/L4/cmake-build-debug/CMakeFiles/Session5_IntBST.dir/intBST_test.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L4/IntBST.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L4/cmake-build-debug/CMakeFiles/Session5_IntBST.dir/IntBST.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L4/intBST_test.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/L4/cmake-build-debug/CMakeFiles/Session5_IntBST.dir/intBST_test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

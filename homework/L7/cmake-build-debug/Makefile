@@ -169,32 +169,32 @@ RandomArray.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/RandomArray.cpp.s
 .PHONY : RandomArray.cpp.s
 
-sorting.obj: sorting.cpp.obj
+lab7.obj: lab7.cpp.obj
 
-.PHONY : sorting.obj
+.PHONY : lab7.obj
 
 # target to build an object file
-sorting.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/sorting.cpp.obj
-.PHONY : sorting.cpp.obj
+lab7.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/lab7.cpp.obj
+.PHONY : lab7.cpp.obj
 
-sorting.i: sorting.cpp.i
+lab7.i: lab7.cpp.i
 
-.PHONY : sorting.i
+.PHONY : lab7.i
 
 # target to preprocess a source file
-sorting.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/sorting.cpp.i
-.PHONY : sorting.cpp.i
+lab7.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/lab7.cpp.i
+.PHONY : lab7.cpp.i
 
-sorting.s: sorting.cpp.s
+lab7.s: lab7.cpp.s
 
-.PHONY : sorting.s
+.PHONY : lab7.s
 
 # target to generate assembly for a file
-sorting.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/sorting.cpp.s
-.PHONY : sorting.cpp.s
+lab7.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\L7.dir\build.make CMakeFiles/L7.dir/lab7.cpp.s
+.PHONY : lab7.cpp.s
 
 # Help Target
 help:
@@ -208,9 +208,9 @@ help:
 	@echo ... RandomArray.obj
 	@echo ... RandomArray.i
 	@echo ... RandomArray.s
-	@echo ... sorting.obj
-	@echo ... sorting.i
-	@echo ... sorting.s
+	@echo ... lab7.obj
+	@echo ... lab7.i
+	@echo ... lab7.s
 .PHONY : help
 
 
