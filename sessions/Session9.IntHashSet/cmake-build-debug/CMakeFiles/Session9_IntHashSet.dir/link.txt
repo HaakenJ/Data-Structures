@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Session9_IntHashSet.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\ar.exe cr CMakeFiles\Session9_IntHashSet.dir/objects.a @CMakeFiles\Session9_IntHashSet.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\Session9_IntHashSet.dir/objects.a -Wl,--no-whole-archive  -o Session9_IntHashSet.exe -Wl,--out-implib,libSession9_IntHashSet.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Session9_IntHashSet.dir\linklibs.rsp
