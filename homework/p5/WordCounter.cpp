@@ -72,7 +72,23 @@ int WordCounter::addWord(const std::string &word) {
      *     increment count of given word in has table
      * return give word count
      */
-    return 0;
+    int result = 0;
+    totalWordCount++;
+    if (getWordCount(word) == 0) {
+        int index = hashWord(word);
+        table[index] = new HashEntry(word);
+        uniqueWordCount++;
+        result = 1;
+    }
+    else {
+        int index = hashWord(word);
+        HashEntry* curr = table[index];
+        while (curr->value != word)
+            curr = curr->next;
+        result = curr->wordCount + 1;
+        delete curr;
+    }
+    return result;
 }
 
 void WordCounter::removeWord(const std::string &word) {

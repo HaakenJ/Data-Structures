@@ -95,13 +95,13 @@ private:
     int capacity;
 
     struct HashEntry {
-        int key;
+        int wordCount;
         std::string value;
         HashEntry *next;
 
-        HashEntry(int newKey, std::string &newVal,
+        HashEntry(std::string newVal,
                   HashEntry *newNext=nullptr) {
-            key   = newKey;
+            wordCount = 0;
             value = newVal;
             next  = newNext;
         }
