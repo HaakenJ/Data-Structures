@@ -5,7 +5,8 @@
 #ifndef P5_WORDCOUNTER_H
 #define P5_WORDCOUNTER_H
 
-#include<iostream>
+#include <iostream>
+#include <cmath>
 
 class WordCounter {
 public:
