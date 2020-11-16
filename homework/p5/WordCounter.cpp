@@ -9,6 +9,9 @@ WordCounter::WordCounter() {
     totalWordCount = 0;
     capacity = DEFAULT_SIZE;
     table = new HashEntry*[capacity];
+
+    for (int i = 0; i < capacity; i++)
+        table[i] = nullptr;
 }
 
 WordCounter::WordCounter(int size) {
@@ -19,6 +22,8 @@ WordCounter::WordCounter(int size) {
     else
         capacity = getNextPrime(size);
     table = new HashEntry*[capacity];
+    for (int i = 0; i < capacity; i++)
+        table[i] = nullptr;
 }
 
 WordCounter::~WordCounter() {
@@ -61,24 +66,21 @@ WordCounter &WordCounter::operator=(const WordCounter &rhs) {
 }
 
 int WordCounter::addWord(const std::string &word) {
-    /**
-     * take in word
-     * Update total word counts
-     * if word does not exist
-     *     add to hash table
-     *     set word count to 1
-     *     update unique word count
-     * else
-     *     increment count of given word in has table
-     * return give word count
-     */
     int result = 0;
     totalWordCount++;
     if (getWordCount(word) == 0) {
         int index = hashWord(word);
-        table[index] = new HashEntry(word);
+
+        if (table[index] != nullptr) {  // check if bucket is occupied
+            HashEntry* temp = table[index];
+            table[index] = new HashEntry(word);
+            table[index]->next = temp;
+        }
+        else {
+            table[index] = new HashEntry(word);
+        }
         uniqueWordCount++;
-        result = 1;
+        result = table[index]->wordCount;
     }
     else {
         int index = hashWord(word);
@@ -86,33 +88,50 @@ int WordCounter::addWord(const std::string &word) {
         while (curr->value != word)
             curr = curr->next;
         result = curr->wordCount + 1;
-        delete curr;
+        curr->wordCount++;
     }
     return result;
 }
 
 void WordCounter::removeWord(const std::string &word) {
-    /**
-     * take in word
-     * if the word doesn't exist throw invalid_argument
-     * remove word node from hash table
-     * reduce total word count and unique word count
-     */
+    if (getWordCount(word) == 0)
+        throw std::invalid_argument("The word you passed in is not in the table.");
+    int index = hashWord(word);
+    HashEntry* curr = table[index];
+
+    // check if the value is first in list
+    if (curr->value == word) {
+        totalWordCount = totalWordCount - curr->wordCount;
+        table[index] = curr->next;
+    }
+    else {
+        HashEntry* prev = curr;
+        while (curr->value != word) {
+            prev = curr;
+            curr = curr->next;
+        }
+        totalWordCount = totalWordCount - curr->wordCount;
+        prev->next = curr->next;
+    }
+    uniqueWordCount--;
 }
 
 int WordCounter::getWordCount(const std::string &word) const {
-    /**
-     * if word in list
-     *     return count of that word
-     * else
-     *     return 0;
-     */
-    return 0;
+    int result = 0;
+    int index = hashWord(word);
+    HashEntry* curr = table[index];
+    while (curr != nullptr) {
+        if (curr->value == word) {
+            result = curr->wordCount;
+            break;
+        }
+        curr = curr->next;
+    }
+    return result;
 }
 
 double WordCounter::getLoadFactor() const {
-    // return uniqueWordCount / bucketCount;
-    return 0;
+     return (double)uniqueWordCount / capacity;
 }
 
 int WordCounter::getUniqueWordCount() const {
@@ -127,7 +146,7 @@ bool WordCounter::empty() const {
     return totalWordCount == 0;
 }
 
-int WordCounter::hashWord(const std::string &word) {
+int WordCounter::hashWord(const std::string &word) const {
     std::hash<std::string> h;
     int index = h(word) % capacity;
     return index;

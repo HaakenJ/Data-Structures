@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/English.h
+string
+-
+vector
+-
+
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/WordCounter.h
 iostream
 -
@@ -15,6 +21,12 @@ cmath
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/main.cpp
 iostream
 -
+iomanip
+-
+bits/stdc++.h
+-
 WordCounter.h
 D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/WordCounter.h
+English.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/English.h
 

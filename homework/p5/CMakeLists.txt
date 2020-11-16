@@ -3,4 +3,4 @@ project(p5)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(p5 main.cpp WordCounter.cpp WordCounter.h)
+add_executable(p5 main.cpp WordCounter.cpp WordCounter.h English.cpp English.h)

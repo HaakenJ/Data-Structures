@@ -142,6 +142,33 @@ p5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/build
 .PHONY : p5/fast
 
+English.obj: English.cpp.obj
+
+.PHONY : English.obj
+
+# target to build an object file
+English.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/English.cpp.obj
+.PHONY : English.cpp.obj
+
+English.i: English.cpp.i
+
+.PHONY : English.i
+
+# target to preprocess a source file
+English.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/English.cpp.i
+.PHONY : English.cpp.i
+
+English.s: English.cpp.s
+
+.PHONY : English.s
+
+# target to generate assembly for a file
+English.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/English.cpp.s
+.PHONY : English.cpp.s
+
 WordCounter.obj: WordCounter.cpp.obj
 
 .PHONY : WordCounter.obj
@@ -205,6 +232,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... p5
+	@echo ... English.obj
+	@echo ... English.i
+	@echo ... English.s
 	@echo ... WordCounter.obj
 	@echo ... WordCounter.i
 	@echo ... WordCounter.s

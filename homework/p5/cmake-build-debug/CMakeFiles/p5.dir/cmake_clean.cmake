@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/p5.dir/English.cpp.obj"
   "CMakeFiles/p5.dir/WordCounter.cpp.obj"
   "CMakeFiles/p5.dir/main.cpp.obj"
   "libp5.dll.a"

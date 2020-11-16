@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/English.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/cmake-build-debug/CMakeFiles/p5.dir/English.cpp.obj"
   "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/WordCounter.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/cmake-build-debug/CMakeFiles/p5.dir/WordCounter.cpp.obj"
   "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/main.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5/cmake-build-debug/CMakeFiles/p5.dir/main.cpp.obj"
   )

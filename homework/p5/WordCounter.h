@@ -101,7 +101,7 @@ private:
 
         HashEntry(std::string newVal,
                   HashEntry *newNext=nullptr) {
-            wordCount = 0;
+            wordCount = 1;
             value = newVal;
             next  = newNext;
         }
@@ -109,7 +109,7 @@ private:
 
     HashEntry** table;
 
-    int hashWord(const std::string &word);
+    int hashWord(const std::string &word) const;
 
     /**
      * Determines if a number is prime
