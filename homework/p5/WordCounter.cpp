@@ -93,9 +93,9 @@ int WordCounter::addWord(const std::string &word) {
     return result;
 }
 
-void WordCounter::removeWord(const std::string &word) {
+bool WordCounter::removeWord(const std::string &word) {
     if (getWordCount(word) == 0)
-        throw std::invalid_argument("The word you passed in is not in the table.");
+        return false;
     int index = hashWord(word);
     HashEntry* curr = table[index];
 
@@ -114,6 +114,7 @@ void WordCounter::removeWord(const std::string &word) {
         prev->next = curr->next;
     }
     uniqueWordCount--;
+    return true;
 }
 
 int WordCounter::getWordCount(const std::string &word) const {
@@ -131,7 +132,7 @@ int WordCounter::getWordCount(const std::string &word) const {
 }
 
 double WordCounter::getLoadFactor() const {
-     return (double)uniqueWordCount / capacity;
+    return (round(uniqueWordCount * 1000) / 1000.0) / capacity;;
 }
 
 int WordCounter::getUniqueWordCount() const {
@@ -160,10 +161,9 @@ bool WordCounter::isPrime(int n) {
 
     for (int i = 2; i < sqrt(n); i++) {
         if (n % i == 0)
-            return true;
+            return false;
     }
-
-    return false;
+    return true;
 }
 
 int WordCounter::getNextPrime(int n) {

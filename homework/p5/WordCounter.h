@@ -53,8 +53,10 @@ public:
     /**
      * Removes a word from WordCounter
      * @param word to be removed from the table
+     * @return     true if the removal was successful
+     *             false if not
      */
-    void removeWord(const std::string &word);
+    bool removeWord(const std::string &word);
 
     /**
      * Returns the count of the specified word, or 0 if
