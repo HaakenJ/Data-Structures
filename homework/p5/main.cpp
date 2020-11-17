@@ -8,6 +8,11 @@
 
 using namespace std;
 
+void analyzeWord(WordCounter &wc, const string &word) {
+    cout << word << ": " << wc.getWordCount(word) << endl;
+    wc.removeWord(word);
+}
+
 void printStats(WordCounter &wc) {
     cout << "Word counter statistics:" << endl;
     cout << "unique: " << wc.getUniqueWordCount() << endl;
@@ -32,7 +37,9 @@ void processFile(WordCounter &wc, const std::string &filepath) {
                 word = word.substr(0, word.length() - 1);
                 word.append(splitWord);
             }
+
             word = English::cleanWord(word);
+
             wc.addWord(word);
         }
         // remove common words
@@ -45,6 +52,43 @@ void processFile(WordCounter &wc, const std::string &filepath) {
         cout << "ERROR: cannot open file";
         return;
     }
+}
+
+void testFileWordCount() {
+    string filepath;
+    int capacity;
+
+    cout << "What is the filename: " << endl;
+    cin >> filepath;
+    cout << "What is the capacity: " << endl;
+    cin >> capacity;
+
+    WordCounter wc(capacity);
+
+    processFile(wc, filepath);
+    cout << endl;
+
+    cin.ignore();
+    cout << "Enter words (separated by space): " << endl;
+    string word, in;
+    vector<string> wordList;
+
+    getline(cin,in);
+
+    istringstream iss(in);
+    while(iss >> word) {
+        wordList.push_back(word);
+    }
+
+    cout << "Analysis of words: " << endl;
+    for (string s: wordList)
+        analyzeWord(wc, s);
+
+    cout << endl;
+
+    printStats(wc);
+
+    cout << endl;
 }
 
 int main() {
@@ -80,17 +124,16 @@ int main() {
 //    cout << "Empty    : " << (wc.empty() ? "true" : "false") << endl;
 //    cout << endl;
 
-    string filepath;
-    int capacity;
+    int choice = 1;
 
-    cout << "What is the filename: " << endl;
-    cin >> filepath;
-    cout << "What is the capacity: " << endl;
-    cin >> capacity;
+    cout << "Welcome to word counter!" << endl << endl;
 
-    WordCounter wc(capacity);
+    while (choice != 0) {
+        testFileWordCount();
+        cout << "Enter 1 to read another file or 0 to quit" << endl;
+        cin >> choice;
+    }
 
-    processFile(wc, filepath);
 
     return 0;
 }

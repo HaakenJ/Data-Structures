@@ -11,18 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac00395-f76f-4038-8b8a-92afcdfce4f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/WordCounter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/WordCounter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/WordCounter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/WordCounter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/WordCounter.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/WordCounter.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="fac00395-f76f-4038-8b8a-92afcdfce4f0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,18 +35,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../p5" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="p3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p3" TARGET_NAME="p3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p3" RUN_TARGET_NAME="p3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -81,6 +65,7 @@
       <workItem from="1604443261143" duration="765000" />
       <workItem from="1605225937284" duration="631000" />
       <workItem from="1605496577752" duration="2445000" />
+      <workItem from="1605573656418" duration="50000" />
     </task>
     <servers />
   </component>
@@ -92,10 +77,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602048032953" />
-    <state x="165" y="167" key="FileChooserDialogImpl" timestamp="1605227195290">
+    <state x="165" y="167" key="FileChooserDialogImpl" timestamp="1605573705042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="165" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605227195290" />
+    <state x="165" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605573705042" />
     <state x="206" y="211" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.2560.1040@0.0.1920.1040" timestamp="1602021222301" />
     <state x="2195" y="211" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.2560.1040@1920.0.2560.1040" timestamp="1602021512200" />
     <state width="1493" height="498" key="GridCell.Tab.0.bottom" timestamp="1603558506828">
