@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/English.cpp
+sstream
+-
+English.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/English.h
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/English.h
+string
+-
+vector
+-
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/WordCounter.cpp
+WordCounter.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/WordCounter.h
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/WordCounter.h
+iostream
+-
+cmath
+-
+
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/p5.cpp
+iostream
+-
+iomanip
+-
+bits/stdc++.h
+-
+vector
+-
+WordCounter.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/WordCounter.h
+English.h
+D:/Haake/Documents/seattle_u_courses/Data-Structures/homework/p5x/English.h
+

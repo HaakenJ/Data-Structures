@@ -76,35 +76,10 @@ include CMakeFiles/p5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/p5.dir/flags.make
 
-CMakeFiles/p5.dir/main.cpp.obj: CMakeFiles/p5.dir/flags.make
-CMakeFiles/p5.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/p5.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\p5.dir\main.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\main.cpp
-
-CMakeFiles/p5.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p5.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\main.cpp > CMakeFiles\p5.dir\main.cpp.i
-
-CMakeFiles/p5.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p5.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\main.cpp -o CMakeFiles\p5.dir\main.cpp.s
-
-CMakeFiles/p5.dir/WordCounter.cpp.obj: CMakeFiles/p5.dir/flags.make
-CMakeFiles/p5.dir/WordCounter.cpp.obj: ../WordCounter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/p5.dir/WordCounter.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\p5.dir\WordCounter.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp
-
-CMakeFiles/p5.dir/WordCounter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p5.dir/WordCounter.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp > CMakeFiles\p5.dir\WordCounter.cpp.i
-
-CMakeFiles/p5.dir/WordCounter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p5.dir/WordCounter.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp -o CMakeFiles\p5.dir\WordCounter.cpp.s
-
 CMakeFiles/p5.dir/English.cpp.obj: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/English.cpp.obj: CMakeFiles/p5.dir/includes_CXX.rsp
 CMakeFiles/p5.dir/English.cpp.obj: ../English.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/p5.dir/English.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/p5.dir/English.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\p5.dir\English.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\English.cpp
 
 CMakeFiles/p5.dir/English.cpp.i: cmake_force
@@ -115,18 +90,46 @@ CMakeFiles/p5.dir/English.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p5.dir/English.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\English.cpp -o CMakeFiles\p5.dir\English.cpp.s
 
+CMakeFiles/p5.dir/p5.cpp.obj: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/p5.cpp.obj: CMakeFiles/p5.dir/includes_CXX.rsp
+CMakeFiles/p5.dir/p5.cpp.obj: ../p5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/p5.dir/p5.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\p5.dir\p5.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\p5.cpp
+
+CMakeFiles/p5.dir/p5.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p5.dir/p5.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\p5.cpp > CMakeFiles\p5.dir\p5.cpp.i
+
+CMakeFiles/p5.dir/p5.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p5.dir/p5.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\p5.cpp -o CMakeFiles\p5.dir\p5.cpp.s
+
+CMakeFiles/p5.dir/WordCounter.cpp.obj: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/WordCounter.cpp.obj: CMakeFiles/p5.dir/includes_CXX.rsp
+CMakeFiles/p5.dir/WordCounter.cpp.obj: ../WordCounter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/p5.dir/WordCounter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\p5.dir\WordCounter.cpp.obj -c D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp
+
+CMakeFiles/p5.dir/WordCounter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p5.dir/WordCounter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp > CMakeFiles\p5.dir\WordCounter.cpp.i
+
+CMakeFiles/p5.dir/WordCounter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p5.dir/WordCounter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Haake\Documents\seattle_u_courses\Data-Structures\homework\p5\WordCounter.cpp -o CMakeFiles\p5.dir\WordCounter.cpp.s
+
 # Object files for target p5
 p5_OBJECTS = \
-"CMakeFiles/p5.dir/main.cpp.obj" \
-"CMakeFiles/p5.dir/WordCounter.cpp.obj" \
-"CMakeFiles/p5.dir/English.cpp.obj"
+"CMakeFiles/p5.dir/English.cpp.obj" \
+"CMakeFiles/p5.dir/p5.cpp.obj" \
+"CMakeFiles/p5.dir/WordCounter.cpp.obj"
 
 # External object files for target p5
 p5_EXTERNAL_OBJECTS =
 
-p5.exe: CMakeFiles/p5.dir/main.cpp.obj
-p5.exe: CMakeFiles/p5.dir/WordCounter.cpp.obj
 p5.exe: CMakeFiles/p5.dir/English.cpp.obj
+p5.exe: CMakeFiles/p5.dir/p5.cpp.obj
+p5.exe: CMakeFiles/p5.dir/WordCounter.cpp.obj
 p5.exe: CMakeFiles/p5.dir/build.make
 p5.exe: CMakeFiles/p5.dir/linklibs.rsp
 p5.exe: CMakeFiles/p5.dir/objects1.rsp

@@ -1,5 +1,8 @@
 //
-// Created by Haake on 11/12/2020.
+// Created by Kramer Johnson on 11/12/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 5
+// kjohnson5@seattleu.edu
 //
 
 #ifndef P5_WORDCOUNTER_H
@@ -22,7 +25,7 @@ public:
      * @precon     size is a prime number
      * @param size desired size of the word table
      */
-    WordCounter(int size);
+    explicit WordCounter(int size);
 
     /**
      * Destructor
@@ -101,7 +104,7 @@ private:
         std::string value;
         HashEntry *next;
 
-        HashEntry(std::string newVal,
+        explicit HashEntry(std::string newVal,
                   HashEntry *newNext=nullptr) {
             wordCount = 1;
             value = newVal;

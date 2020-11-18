@@ -196,32 +196,32 @@ WordCounter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/WordCounter.cpp.s
 .PHONY : WordCounter.cpp.s
 
-main.obj: main.cpp.obj
+p5.obj: p5.cpp.obj
 
-.PHONY : main.obj
+.PHONY : p5.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+p5.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/p5.cpp.obj
+.PHONY : p5.cpp.obj
 
-main.i: main.cpp.i
+p5.i: p5.cpp.i
 
-.PHONY : main.i
+.PHONY : p5.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/main.cpp.i
-.PHONY : main.cpp.i
+p5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/p5.cpp.i
+.PHONY : p5.cpp.i
 
-main.s: main.cpp.s
+p5.s: p5.cpp.s
 
-.PHONY : main.s
+.PHONY : p5.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/main.cpp.s
-.PHONY : main.cpp.s
+p5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p5.dir\build.make CMakeFiles/p5.dir/p5.cpp.s
+.PHONY : p5.cpp.s
 
 # Help Target
 help:
@@ -238,9 +238,9 @@ help:
 	@echo ... WordCounter.obj
 	@echo ... WordCounter.i
 	@echo ... WordCounter.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... p5.obj
+	@echo ... p5.i
+	@echo ... p5.s
 .PHONY : help
 
 

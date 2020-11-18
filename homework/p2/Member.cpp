@@ -136,7 +136,7 @@ void Member::resize() {
     for (int i = 0; i < count; ++i) {
         temp[i] = memberArray[i];
     }
-
+`
     // Deallocate old memberArray
     delete[] memberArray;
 

@@ -11,7 +11,31 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac00395-f76f-4038-8b8a-92afcdfce4f0" name="Default Changelist" comment="" />
+    <list default="true" id="fac00395-f76f-4038-8b8a-92afcdfce4f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../p5x/.idea/p5x.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Member.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Member.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/WordCounter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/WordCounter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/WordCounter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/WordCounter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/WordCounter.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/WordCounter.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/CMakeFiles/p5.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/cmake-build-debug/p5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../p5/p5.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../p5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -66,6 +90,7 @@
       <workItem from="1605225937284" duration="631000" />
       <workItem from="1605496577752" duration="2445000" />
       <workItem from="1605573656418" duration="50000" />
+      <workItem from="1605669578355" duration="1019000" />
     </task>
     <servers />
   </component>

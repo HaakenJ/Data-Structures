@@ -1,5 +1,8 @@
 //
-// Created by Haake on 11/12/2020.
+// Created by Kramer Johnson on 11/12/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 5
+// kjohnson5@seattleu.edu
 //
 
 #include "WordCounter.h"
@@ -17,10 +20,11 @@ WordCounter::WordCounter() {
 WordCounter::WordCounter(int size) {
     uniqueWordCount = 0;
     totalWordCount = 0;
-    if (isPrime(size))
-        capacity = size;
-    else
-        capacity = getNextPrime(size);
+    capacity = size;
+//    if (isPrime(size))
+//        capacity = size;
+//    else
+//        capacity = getNextPrime(size);
     table = new HashEntry*[capacity];
     for (int i = 0; i < capacity; i++)
         table[i] = nullptr;
@@ -132,7 +136,7 @@ int WordCounter::getWordCount(const std::string &word) const {
 }
 
 double WordCounter::getLoadFactor() const {
-    return (round(uniqueWordCount * 1000) / 1000.0) / capacity;;
+    return (round(uniqueWordCount * 1000) / 1000.0) / capacity;
 }
 
 int WordCounter::getUniqueWordCount() const {

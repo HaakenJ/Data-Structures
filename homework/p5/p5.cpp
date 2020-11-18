@@ -1,3 +1,10 @@
+//
+// Created by Kramer Johnson on 11/12/2020.
+// Seattle University CSPC 5901 03 Fall 2020
+// Project 5
+// kjohnson5@seattleu.edu
+//
+
 #include <iostream>
 #include <iomanip>
 #include <bits/stdc++.h>
@@ -8,11 +15,22 @@
 
 using namespace std;
 
+/**
+ * Function to print the analysis of a single word in a
+ * wordcounter and then remove it
+ * @param wc   an instance of WordCounter
+ * @param word the word to analyze and remove
+ */
 void analyzeWord(WordCounter &wc, const string &word) {
     cout << word << ": " << wc.getWordCount(word) << endl;
     wc.removeWord(word);
 }
 
+/**
+ * Function to print the uniqueWordCount, totalWordCount, and
+ * loadFactor of a wordcounter
+ * @param wc an instance of WordCounter
+ */
 void printStats(WordCounter &wc) {
     cout << "Word counter statistics:" << endl;
     cout << "unique: " << wc.getUniqueWordCount() << endl;
@@ -21,6 +39,11 @@ void printStats(WordCounter &wc) {
     cout << endl;
 }
 
+/**
+ * Function that process the text from a file into a wordcounter instance.
+ * @param wc       an instance of WordCounter
+ * @param filepath the path to the file the client wants to process
+ */
 void processFile(WordCounter &wc, const std::string &filepath) {
     string word, splitWord;
     ifstream inFile;
@@ -54,7 +77,11 @@ void processFile(WordCounter &wc, const std::string &filepath) {
     }
 }
 
-void testFileWordCount() {
+/**
+ * Function to prompt user for filename and capacity, process the file,
+ * and prompt for word to analyze
+ */
+void wordCountDriver() {
     string filepath;
     int capacity;
 
@@ -92,48 +119,15 @@ void testFileWordCount() {
 }
 
 int main() {
-//    WordCounter wc;
-//
-//    cout << "Apple 1: " << wc.addWord("apple") << endl;
-//    cout << "Apple 2: " << wc.addWord("apple") << endl;
-//    cout << "Apple 3: " << wc.addWord("apple") << endl;
-//    cout << "Pear 1 : " << wc.addWord("pear") << endl;
-//    cout << "Pear 2 : " << wc.addWord("pear") << endl;
-//    cout << "Table 1: " << wc.addWord("table") << endl;
-//
-//    cout << endl;
-//
-//    cout << "Unique words s/b 3: " << wc.getUniqueWordCount() << endl;
-//    cout << "Total words s/b 6 : " << wc.getTotalWordCount() << endl;
-//    cout << "Load Factor       : " << std::setprecision(3) << fixed << wc.getLoadFactor() << endl;
-//
-//    cout << endl;
-//    cout << "Remove apple" << endl;
-//    wc.removeWord("apple");
-//
-//    cout << "Unique words s/b 2: " << wc.getUniqueWordCount() << endl;
-//    cout << "Total words s/b 3 : " << wc.getTotalWordCount() << endl;
-//    cout << "Load Factor       : " << std::setprecision(3) << fixed << wc.getLoadFactor() << endl;
-//
-//    cout << endl;
-//
-//    cout << "Test empty" << endl;
-//    cout << "Not empty: " << (wc.empty() ? "false" : "true") << endl;
-//    wc.removeWord("pear");
-//    wc.removeWord("table");
-//    cout << "Empty    : " << (wc.empty() ? "true" : "false") << endl;
-//    cout << endl;
-
     int choice = 1;
 
     cout << "Welcome to word counter!" << endl << endl;
 
     while (choice != 0) {
-        testFileWordCount();
+        wordCountDriver();
         cout << "Enter 1 to read another file or 0 to quit" << endl;
         cin >> choice;
     }
-
 
     return 0;
 }
