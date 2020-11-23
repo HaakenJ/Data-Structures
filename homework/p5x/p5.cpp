@@ -60,11 +60,13 @@ void processFile(WordCounter &wc, const std::string &filepath) {
                 word = word.substr(0, word.length() - 1);
                 word.append(splitWord);
             }
-
             word = English::cleanWord(word);
 
             wc.addWord(word);
         }
+        cout << "Before removing common words: " << endl;
+        cout << "Unique Words: " << wc.getUniqueWordCount() << endl;
+        cout << "Total Words : " << wc.getTotalWordCount() << endl;
         // remove common words
         for (string common: commonWords)
             wc.removeWord(common);
@@ -118,6 +120,26 @@ void wordCountDriver() {
     cout << endl;
 }
 
+bool isPrime(int n) {
+    if (n <= 1)
+        return false;
+    if (n == 2)
+        return true;
+
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
+}
+
+int getNextPrime(int n) {
+    while (!isPrime(n))
+        n++;
+
+    return n;
+}
+
 int main() {
     int choice = 1;
 
@@ -128,6 +150,7 @@ int main() {
         cout << "Enter 1 to read another file or 0 to quit" << endl;
         cin >> choice;
     }
+
 
     return 0;
 }

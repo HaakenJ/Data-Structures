@@ -24,6 +24,7 @@ WordCounter::WordCounter(int size) {
         capacity = size;
     else
         capacity = getNextPrime(size);
+    std::cout << capacity << std::endl;
     table = new HashEntry*[capacity];
     for (int i = 0; i < capacity; i++)
         table[i] = nullptr;
@@ -62,7 +63,7 @@ WordCounter &WordCounter::operator=(const WordCounter &rhs) {
 
         // Copy over elements from other
         for (int i = 0; i < capacity; i++) {
-            *this->table[i] = *rhs.table[i];
+            this->table[i] = rhs.table[i];
         }
     }
     return *this;
@@ -71,6 +72,9 @@ WordCounter &WordCounter::operator=(const WordCounter &rhs) {
 int WordCounter::addWord(const std::string &word) {
     int result = 0;
     totalWordCount++;
+
+    std::cout << "Inserting: " << word << std::endl;
+
     if (getWordCount(word) == 0) {
         int index = hashWord(word);
 
@@ -93,12 +97,20 @@ int WordCounter::addWord(const std::string &word) {
         result = curr->wordCount + 1;
         curr->wordCount++;
     }
+
+    std::cout << "LoadFactor: " << getLoadFactor() << std::endl;
+    // double size of table if load factor is too large
+    if (getLoadFactor() > 0.75)
+        doubleSize();
+
+
     return result;
 }
 
 bool WordCounter::removeWord(const std::string &word) {
     if (getWordCount(word) == 0)
         return false;
+
     int index = hashWord(word);
     HashEntry* curr = table[index];
 
@@ -117,6 +129,11 @@ bool WordCounter::removeWord(const std::string &word) {
         prev->next = curr->next;
     }
     uniqueWordCount--;
+
+    // if load factor is too small, cut size in half
+    if (getLoadFactor() < 0.30)
+        reduceSize();
+
     return true;
 }
 
@@ -156,13 +173,19 @@ int WordCounter::hashWord(const std::string &word) const {
     return index;
 }
 
+int WordCounter::hashWord(const std::string &word, int size) const {
+    std::hash<std::string> h;
+    int index = h(word) % size;
+    return index;
+}
+
 bool WordCounter::isPrime(int n) {
     if (n <= 1)
         return false;
     if (n == 2)
         return true;
 
-    for (int i = 2; i < sqrt(n); i++) {
+    for (int i = 2; i <= sqrt(n); i++) {
         if (n % i == 0)
             return false;
     }
@@ -178,28 +201,45 @@ int WordCounter::getNextPrime(int n) {
 
 void WordCounter::doubleSize() {
     // Update capacity
-    capacity *= 2;
+    int newCapacity = capacity * 2;
 
-    if (!isPrime(capacity))
-        capacity = getNextPrime(capacity);
+    if (!isPrime(newCapacity))
+        newCapacity = getNextPrime(newCapacity);
+
+    std::cout << "New Capacity: " << newCapacity << std::endl;
 
     // Create temp array with new capacity
-    auto **temp = new HashEntry*[capacity];
+    auto **temp = new HashEntry*[newCapacity];
 
     // initialize to nullptr
-    for (int i = 0; i < capacity; i++)
+    for (int i = 0; i < newCapacity; i++)
         temp[i] = nullptr;
 
     // Copy old values to temp array
     for (int i = 0; i < capacity; i++) {
-        if (table[i] == nullptr)
-            temp[i] = nullptr;
-        else
-            temp[i] = table[i];
 
+        if (table[i] != nullptr) {
+            HashEntry *curr = table[i];
+            while (curr != nullptr) {
+                int newAddress = hashWord(curr->value, newCapacity);
+                std::cout << "New Address for " << curr->value << " is ";
+                std:: cout << newAddress << std::endl;
+                if (temp[newAddress] == nullptr)
+                    temp[newAddress] = curr;
+                else { // temp[newAddress] already has an entry
+                    HashEntry *tempCurr = temp[newAddress];
+                    while (tempCurr->next != nullptr) // move to last item
+                        tempCurr = tempCurr->next;
+                    tempCurr->next = curr;  // add table list to end of entry
+                }
+                curr = curr->next;
+            }
+        }
     }
 
-    // Deallocate old memberArray
+    capacity = newCapacity;
+
+    // Deallocate old table
     delete[] table;
 
     // Reassign old array to new
@@ -217,18 +257,13 @@ void WordCounter::reduceSize() {
     auto **temp = new HashEntry*[newCapacity];
 
     // initialize to nullptr
-    for (int i = 0; i < capacity; i++)
+    for (int i = 0; i < newCapacity; i++)
         temp[i] = nullptr;
 
     // Copy old values to temp array
     for (int i = 0; i < capacity; i++) {
-        int newAddress = i % capacity;
-        if (table[i] == nullptr && temp[newAddress] == nullptr)
-            temp[newAddress] = nullptr;
-        else if (table[i] == nullptr) {
-            // skip this entry because temp[newAddress] already has a value
-        }
-        else { // table[i] has value
+        if (table[i] != nullptr) {
+            int newAddress = hashWord(table[i]->value, newCapacity);
             if (temp[newAddress] == nullptr)
                 temp[newAddress] = table[i];
             else { // temp[newAddress] already has an entry
@@ -240,16 +275,12 @@ void WordCounter::reduceSize() {
         }
     }
 
+    capacity = newCapacity;
+
     // Deallocate old memberArray
     delete[] table;
 
     // Reassign old array to new
     table = temp;
-}
-
-int WordCounter::hashWord(const std::string &word, int size) const {
-    std::hash<std::string> h;
-    int index = h(word) % size;
-    return index;
 }
 

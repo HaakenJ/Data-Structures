@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session6.STL-set-and-map/main.cpp" "D:/Haake/Documents/seattle_u_notes/data_structures/sessions/Session6.STL-set-and-map/cmake-build-debug/CMakeFiles/Session6_STL_set_and_map.dir/main.cpp.obj"
+  "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session6.STL-set-and-map/main.cpp" "D:/Haake/Documents/seattle_u_courses/Data-Structures/sessions/Session6.STL-set-and-map/cmake-build-debug/CMakeFiles/Session6_STL_set_and_map.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

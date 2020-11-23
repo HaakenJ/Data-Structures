@@ -124,7 +124,7 @@ private:
     /**
      * Hash a word to get its address in the table
      * @param word to hash
-     * @param size size of the table to be hashed into
+     * @param size of the table to hash into
      * @return     index of the word
      */
     int hashWord(const std::string &word, int size) const;
